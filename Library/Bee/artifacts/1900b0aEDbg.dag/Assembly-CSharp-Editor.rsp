@@ -343,6 +343,8 @@
 -r:"Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll"
 -r:"Library/PackageCache/com.unity.visualscripting@1.9.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aEDbg.dag/Cinemachine.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aEDbg.dag/com.unity.cinemachine.editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.AdaptivePerformance.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.AdaptivePerformance.Profiler.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.AdaptivePerformance.ref.dll"
@@ -378,6 +380,10 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 -analyzer:"D:/Games/2022.3.21f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"D:/Games/2022.3.21f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
+"Assets/Joystick Pack/Scripts/Editor/DynamicJoystickEditor.cs"
+"Assets/Joystick Pack/Scripts/Editor/FloatingJoystickEditor.cs"
+"Assets/Joystick Pack/Scripts/Editor/JoystickEditor.cs"
+"Assets/Joystick Pack/Scripts/Editor/VariableJoystickEditor.cs"
 "Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs"
 -langversion:9.0
 
