@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638569143034384593
-    m_Hash: 3238626786
+      ticks: 638569156965072824
+    m_Hash: 4267930808
   m_LockFileStatus:
     m_FilePath: D:/Games/NinjaCity/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638569143034474598
-    m_Hash: 2951967275
+      ticks: 638569156965072824
+    m_Hash: 2997012183
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
