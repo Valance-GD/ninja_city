@@ -9,8 +9,11 @@ public class BuildButton : MonoBehaviour
     {
         if (other.TryGetComponent(out PlayerController player))
         {
-            _building.SetActive(true);
-            Destroy(gameObject);
+            if (player.GetComponent<PlayerResurses>().SpendResource("Wood", 20))
+            {
+                _building.SetActive(true);
+                Destroy(gameObject);
+            }
         }
     }
 }
