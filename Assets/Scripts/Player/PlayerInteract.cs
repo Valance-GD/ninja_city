@@ -11,17 +11,38 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private float _raycastDistance = 5f;
 
 
-    private void OnTriggerEnter(Collider other)
+    [SerializeField] private  float overlapRadius = 3.0f;
+    [SerializeField] private LayerMask enemyZoneLayer; 
+
+    private bool isInteracting = false;
+
+    void Update()
     {
-        if (other.TryGetComponent(out MineZone obj))
+        CheckOverlap();
+    }
+
+    private void CheckOverlap()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, overlapRadius, enemyZoneLayer);
+        bool foundEnemyZone = false;
+
+        foreach (var hitCollider in hitColliders)
         {
+            if (hitCollider.TryGetComponent(out Enemy obj))
+            {
+                foundEnemyZone = true;
+                break;
+            }
+        }
+
+        if (foundEnemyZone && !isInteracting)
+        {
+            isInteracting = true;
             StartInteract();
         }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.TryGetComponent(out MineZone obj))
+        else if (!foundEnemyZone && isInteracting)
         {
+            isInteracting = false;
             EndInteract();
         }
     }

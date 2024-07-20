@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BuildButton : MonoBehaviour
@@ -9,11 +7,9 @@ public class BuildButton : MonoBehaviour
     {
         if (other.TryGetComponent(out PlayerController player))
         {
-            if (player.GetComponent<PlayerResurses>().SpendResource("Wood", 20))
-            {
-                _building.SetActive(true);
-                Destroy(gameObject);
-            }
+
+            _building.SetActive(true);
+            Destroy(gameObject);
         }
     }
 }
