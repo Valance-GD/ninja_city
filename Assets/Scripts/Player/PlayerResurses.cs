@@ -35,9 +35,9 @@ public class PlayerResurses : MonoBehaviour
     }
     public bool SpendResource(string resourceName, int amount)
     {
-        if (_resources[resourceName] >= amount)
+        if (_resources.ContainsKey(resourceName))
         {
-            if (_resources.ContainsKey(resourceName))
+            if (_resources[resourceName] >= amount)
             {
                 _resources[resourceName] -= amount;
                 UpdateUI(resourceName);
@@ -45,12 +45,13 @@ public class PlayerResurses : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning($"Resource {resourceName} does not exist.");
+               
                 return false;
             }
         }
         else
         {
+            Debug.LogWarning($"Resource {resourceName} does not exist.");
             return false;
         }
     }

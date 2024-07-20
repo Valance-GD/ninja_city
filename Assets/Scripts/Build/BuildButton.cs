@@ -5,11 +5,13 @@ public class BuildButton : MonoBehaviour
     [SerializeField] private GameObject _building;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out PlayerController player))
+        if (other.TryGetComponent(out PlayerResurses player))
         {
-
-            _building.SetActive(true);
-            Destroy(gameObject);
+            if(player.SpendResource("Wood", 20))
+            {
+                _building.SetActive(true);
+                Destroy(gameObject);
+            }
         }
     }
 }

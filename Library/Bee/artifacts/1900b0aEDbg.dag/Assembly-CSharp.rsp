@@ -386,6 +386,7 @@
 "Assets/Scripts/Player/PlayerController.cs"
 "Assets/Scripts/Player/PlayerInteract.cs"
 "Assets/Scripts/Player/PlayerResurses.cs"
+"Assets/Scripts/Resourses/CutTree.cs"
 "Assets/Scripts/Resourses/ResourseInfo.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
