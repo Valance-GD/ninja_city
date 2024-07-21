@@ -5,10 +5,10 @@ using UnityEngine;
 public abstract class BaseHouse : MonoBehaviour
 {
     [SerializeField] protected float _secondToCollect;
-    [SerializeField] protected int _moneyAmount;
+    [SerializeField] protected int _resAmount;
     [SerializeField] protected string _resourseType;
     [SerializeField] protected ResourseSpawn _spawnResPoint;
-    public int MoneyAmount => _moneyAmount; 
+    public int ResAmount => _resAmount; 
     public string ResourseType => _resourseType;
 
     private float _defoultSecondToCollect;

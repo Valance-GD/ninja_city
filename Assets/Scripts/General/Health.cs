@@ -16,7 +16,7 @@ public class Health : MonoBehaviour
         _maxHealth = _health;
         _cameraTransform = Camera.main.transform;
     }
-    public float TakeDamage(float damage)
+    public float TakeDamage(float damage, GameObject target, int resoursAmount = 0)
     {
         if (!_healthImage.gameObject.activeSelf)
         {
@@ -24,6 +24,11 @@ public class Health : MonoBehaviour
         }
         StopAllCoroutines();
         _health -= damage;
+        if (_health <= 0)
+        {
+            PlayerResurses.Instance.AddResource("Money",resoursAmount);
+            Destroy(target);
+        }
         UpdateUIHealth();
         StartCoroutine(Healing());
         return _health;

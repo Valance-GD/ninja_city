@@ -1,10 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class PlayerResurses : MonoBehaviour
 {
+    public static PlayerResurses Instance { get; private set; }
+
 
     [SerializeField] private TextMeshProUGUI _moneyText;
     [SerializeField] private TextMeshProUGUI _woodText;
@@ -19,6 +20,11 @@ public class PlayerResurses : MonoBehaviour
 
         _resourceTexts["Money"] = _moneyText;
         _resourceTexts["Wood"] = _woodText;
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        
     }
 
     public void AddResource(string resourceName, int amount)
@@ -45,7 +51,7 @@ public class PlayerResurses : MonoBehaviour
             }
             else
             {
-               
+
                 return false;
             }
         }

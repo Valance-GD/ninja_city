@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 5723087169314316445}
   m_Layer: 7
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -293,8 +293,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 7373539606779269264}
-  _damage: 0.05
+  _damage: 5
   _addResurseAmount: 10
+  _targetTag: Ninja
 --- !u!114 &779095712498759945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,7 +311,6 @@ MonoBehaviour:
   _healthImage: {fileID: 8755042658428736737}
   _health: 100
   _healingSpeed: 10
-  _cameraTransform: {fileID: 0}
 --- !u!136 &5723087169314316445
 CapsuleCollider:
   m_ObjectHideFlags: 0
