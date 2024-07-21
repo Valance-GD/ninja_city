@@ -8,11 +8,8 @@ public class CutTree : MonoBehaviour
     [SerializeField] private GameObject baseTree, baseCut, upCut;
     [SerializeField] private float deleatingTime;
     [SerializeField] private int _woodAmount;
-    private PlayerResurses player;
-    private void Start()
-    {
-        player = FindObjectOfType<PlayerResurses>();
-    }
+    private PlayerResurces player;
+
     public void Cut()
     {
         baseTree.SetActive(false);
@@ -23,7 +20,7 @@ public class CutTree : MonoBehaviour
     private IEnumerator DeletingProcces()
     {
         yield return new WaitForSeconds(deleatingTime);
-        player.AddResource("Wood", _woodAmount);
+        PlayerResurces.Instance.AddResource("Wood", _woodAmount);
         StopAllCoroutines();
         Destroy(gameObject);
     }

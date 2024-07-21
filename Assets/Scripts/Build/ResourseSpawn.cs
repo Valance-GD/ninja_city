@@ -34,7 +34,7 @@ public class ResourseSpawn : MonoBehaviour
             spawnOffset = Vector3.zero;
             foreach (GameObject res in _resoursesToCollect)
             {
-                player.GetComponent<PlayerResurses>().AddResource(_house.ResourseType, _house.ResAmount);
+                player.GetComponent<PlayerResurces>().AddResource(_house.ResourseType, _house.ResAmount);
                 Destroy(res);
             }
             _resoursesToCollect.Clear();

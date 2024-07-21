@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine.UI;
 
 public class NinjaControl : MonoBehaviour
 {
-    [SerializeField] private Button button;
+    public Button button;
 
 
     private void Start()
@@ -16,5 +17,5 @@ public class NinjaControl : MonoBehaviour
             button.onClick.AddListener(n.GetComponent<Ninja>().StartMoveToTarget);
         }
     }
-    
+   
 }

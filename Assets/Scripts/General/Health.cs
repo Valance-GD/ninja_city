@@ -8,8 +8,9 @@ public class Health : MonoBehaviour
     [SerializeField] private Slider _healthImage;   
     [SerializeField] private float _health;
     [SerializeField] private float _healingSpeed = 5f;
-     private Transform _cameraTransform;
+    private Transform _cameraTransform;
     private float _maxHealth;
+   
     private void Start()
     {
         UpdateUIHealth();
@@ -26,9 +27,14 @@ public class Health : MonoBehaviour
         _health -= damage;
         if (_health <= 0)
         {
-            PlayerResurses.Instance.AddResource("Money",resoursAmount);
+            if(target.TryGetComponent( out Ninja ninja ))
+            {
+                ninja._ninjaHouse.NinjaDie(target);
+            }
+            PlayerResurces.Instance.AddResource("Money", resoursAmount);
             Destroy(target);
         }
+
         UpdateUIHealth();
         StartCoroutine(Healing());
         return _health;

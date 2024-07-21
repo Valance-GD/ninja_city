@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class PlayerResurses : MonoBehaviour
+public class PlayerResurces : MonoBehaviour
 {
-    public static PlayerResurses Instance { get; private set; }
+    public static PlayerResurces Instance { get; private set; }
 
 
     [SerializeField] private TextMeshProUGUI _moneyText;
@@ -26,7 +26,6 @@ public class PlayerResurses : MonoBehaviour
         }
         
     }
-
     public void AddResource(string resourceName, int amount)
     {
         if (_resources.ContainsKey(resourceName))
@@ -36,7 +35,7 @@ public class PlayerResurses : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning($"Resource {resourceName} does not exist.");
+            Debug.LogError($"Resource {resourceName} does not exist.");
         }
     }
     public bool SpendResource(string resourceName, int amount)
@@ -57,7 +56,7 @@ public class PlayerResurses : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning($"Resource {resourceName} does not exist.");
+            Debug.LogError($"Resource {resourceName} does not exist.");
             return false;
         }
     }

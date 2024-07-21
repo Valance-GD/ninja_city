@@ -6,6 +6,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent), typeof(Health))]
 public class Ninja : BaseAi
 {
+    public NinjaHouse _ninjaHouse;
     protected override void Start()
     {
         base.Start();
@@ -32,6 +33,8 @@ public class Ninja : BaseAi
     }
     private IEnumerator StartAtacking()
     {
+        _gameObjectNavMesh.stoppingDistance = 1;
+        _gameObjectNavMesh.speed = 2.5f;
         while (true)
         {
             MoveToClosestTarget(true);
@@ -42,10 +45,10 @@ public class Ninja : BaseAi
     {
         _animator.SetBool("isStopped", false);
         _gameObjectNavMesh.stoppingDistance = 3;
+        _gameObjectNavMesh.speed = 4;
         while (true)
         {
             _gameObjectNavMesh.SetDestination(target.position);
-            _gameObjectNavMesh.speed = 3;
             yield return new WaitForSeconds(0.5f);
         }
     }

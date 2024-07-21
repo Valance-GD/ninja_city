@@ -4,15 +4,18 @@ public class BuildButton : MonoBehaviour
 {
     [SerializeField] private GameObject _building;
     [SerializeField] private int _resoursAmountToBuild;
+    [SerializeField] protected string _resoursTypeToBuild;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out PlayerResurses player))
+        if (other.TryGetComponent(out PlayerResurces player))
         {
-            if(player.SpendResource("Wood", _resoursAmountToBuild))
+
+            if (player.SpendResource(_resoursTypeToBuild, _resoursAmountToBuild))
             {
                 _building.SetActive(true);
                 Destroy(gameObject);
             }
+
         }
     }
 }
