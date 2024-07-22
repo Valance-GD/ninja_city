@@ -31,7 +31,11 @@ public class Health : MonoBehaviour
             {
                 ninja._ninjaHouse.NinjaDie(target);
             }
-            PlayerResurces.Instance.AddResource("Money", resoursAmount);
+            if(target.TryGetComponent( out Human human ))
+            {
+                human._humanHouse.HumanDie(target);
+            }
+            ResurcesManager.Instance.AddResource("Money", resoursAmount);
             Destroy(target);
         }
 

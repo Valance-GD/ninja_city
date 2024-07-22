@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3085e55ce3c20b1408dc4c01f8ebab30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _secondToCollect: 2
+  _secondToCollect: 5
   _resAmount: 30
   _resourseType: Wood
   _spawnResPoint: {fileID: 2546563240709968621}

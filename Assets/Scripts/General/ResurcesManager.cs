@@ -2,13 +2,14 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class PlayerResurces : MonoBehaviour
+public class ResurcesManager : MonoBehaviour
 {
-    public static PlayerResurces Instance { get; private set; }
+    public static ResurcesManager Instance { get; private set; }
 
 
     [SerializeField] private TextMeshProUGUI _moneyText;
     [SerializeField] private TextMeshProUGUI _woodText;
+    [SerializeField] private TextMeshProUGUI _foodText;
 
     private Dictionary<string, int> _resources = new Dictionary<string, int>();
     private Dictionary<string, TextMeshProUGUI> _resourceTexts = new Dictionary<string, TextMeshProUGUI>();
@@ -17,9 +18,11 @@ public class PlayerResurces : MonoBehaviour
     {
         _resources["Money"] = 0;
         _resources["Wood"] = 0;
+        _resources["Food"] = 0;
 
         _resourceTexts["Money"] = _moneyText;
         _resourceTexts["Wood"] = _woodText;
+        _resourceTexts["Food"] = _foodText;
         if (Instance == null)
         {
             Instance = this;

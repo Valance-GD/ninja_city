@@ -118,8 +118,13 @@ PrefabInstance:
       objectReference: {fileID: 5393684215941135647}
     - target: {fileID: 733632480560023598, guid: d2b1023e1e7c6ec4fae61bf40bcf4a4a,
         type: 3}
+      propertyPath: _resoursTypeToBuild
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 733632480560023598, guid: d2b1023e1e7c6ec4fae61bf40bcf4a4a,
+        type: 3}
       propertyPath: _resoursAmountToBuild
-      value: 20
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3876346247206464470, guid: d2b1023e1e7c6ec4fae61bf40bcf4a4a,
         type: 3}
@@ -296,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 550dc37b86b88dc4f9ca3ca1641b5065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _secondToCollect: 3
+  _secondToCollect: 10
   _resAmount: 50
   _resourseType: Money
   _spawnResPoint: {fileID: 1766060314391079107}

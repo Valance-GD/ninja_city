@@ -7,10 +7,10 @@ public class BuildButton : MonoBehaviour
     [SerializeField] protected string _resoursTypeToBuild;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out PlayerResurces player))
+        if (other.TryGetComponent(out PlayerController player))
         {
 
-            if (player.SpendResource(_resoursTypeToBuild, _resoursAmountToBuild))
+            if (ResurcesManager.Instance.SpendResource(_resoursTypeToBuild, _resoursAmountToBuild))
             {
                 _building.SetActive(true);
                 Destroy(gameObject);

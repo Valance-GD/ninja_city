@@ -18,11 +18,12 @@ public class Enemy : BaseAi
         }
     }
     private IEnumerator StartAtacking()
-    {
+    {     
         while (true)
         {
             MoveToClosestTarget(true);
             yield return new WaitForSeconds(0.5f);
         }
+        
     }
 }

@@ -49,8 +49,8 @@ GameObject:
   - component: {fileID: 7196929485832357040}
   - component: {fileID: 2866260441924495228}
   - component: {fileID: 2584376853812217519}
-  - component: {fileID: 2804445591761989610}
   - component: {fileID: 7887046166765684054}
+  - component: {fileID: 4385360775632703281}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -152,27 +152,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a119b272b0077a548b742c497d74ceab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overlapRadius: 3
+  interactZoneLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
   _animator: {fileID: 6924822466425530351}
   _sword: {fileID: 1019399683442200912}
-  _raycastDistance: 5
-  overlapRadius: 2
-  enemyZoneLayer:
-    serializedVersion: 2
-    m_Bits: 128
---- !u!114 &2804445591761989610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2948531626994951694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c7fffd3f869eb04bb7244f96d837ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _moneyText: {fileID: 0}
-  _woodText: {fileID: 0}
+  _treeCutButton: {fileID: 0}
+  _cutEffect: {fileID: 2534121742079016600, guid: a2d4864b8d07bd54e9921f89336f32dd,
+    type: 3}
+  _cutRadius: 3
+  _animationTime: 1.3
 --- !u!114 &7887046166765684054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,7 +178,19 @@ MonoBehaviour:
   _healthImage: {fileID: 7129787797187886361}
   _health: 100
   _healingSpeed: 5
-  _cameraTransform: {fileID: 0}
+--- !u!114 &4385360775632703281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2948531626994951694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd02f1503504d8544a554112409eaf0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 0}
 --- !u!1 &4555745445487008025
 GameObject:
   m_ObjectHideFlags: 0

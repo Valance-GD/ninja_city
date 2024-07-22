@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
@@ -56,8 +57,10 @@ public abstract class BaseAi : MonoBehaviour
             return;
         }
         _gameObjectNavMesh.SetDestination(target.position);
-        if (_gameObjectNavMesh.velocity.sqrMagnitude < 0.1f && _gameObjectNavMesh.remainingDistance <= _gameObjectNavMesh.stoppingDistance)
+
+        if (_gameObjectNavMesh.velocity.sqrMagnitude < 0.1f && _gameObjectNavMesh.remainingDistance <= _gameObjectNavMesh.stoppingDistance && _gameObjectNavMesh.remainingDistance!=0)
         {
+            Debug.Log(_gameObjectNavMesh.remainingDistance);
             _animator.SetBool("isStopped", true);
             if(target.TryGetComponent(out BaseAi ai))
             {
