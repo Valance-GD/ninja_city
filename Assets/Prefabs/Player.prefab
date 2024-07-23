@@ -155,7 +155,7 @@ MonoBehaviour:
   overlapRadius: 3
   interactZoneLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 136
   _animator: {fileID: 6924822466425530351}
   _sword: {fileID: 1019399683442200912}
   _treeCutButton: {fileID: 0}

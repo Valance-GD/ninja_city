@@ -62,7 +62,7 @@ public class PlayerInteract : MonoBehaviour
         else if(!foundTree)
         {
             
-            _treeCutButton.SetActive(false);
+            _treeCutButton?.SetActive(false);
         }
     }
     public void StartCut()

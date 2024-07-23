@@ -21,7 +21,7 @@ public class Enemy : BaseAi
     {     
         while (true)
         {
-            MoveToClosestTarget(true);
+            MoveToClosestTarget(false);
             yield return new WaitForSeconds(0.5f);
         }
         

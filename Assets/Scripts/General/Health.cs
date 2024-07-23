@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -27,18 +28,25 @@ public class Health : MonoBehaviour
         _health -= damage;
         if (_health <= 0)
         {
-            if(target.TryGetComponent( out Ninja ninja ))
+            if (target.TryGetComponent(out PlayerController player))
             {
-                ninja._ninjaHouse.NinjaDie(target);
+                SceneManager.LoadScene(0);
             }
-            if(target.TryGetComponent( out Human human ))
+            else if (target.TryGetComponent(out Ninja ninja))
             {
-                human._humanHouse.HumanDie(target);
+                ninja._ninjaHouse.AIDie(target);
             }
-            ResurcesManager.Instance.AddResource("Money", resoursAmount);
+            else if (target.TryGetComponent(out Human human))
+            {
+                human._humanHouse.AIDie(target);
+            }
+            else if (target.TryGetComponent(out Enemy enemy))
+            {
+                BattleManager.Instance.EnemyDie(target);
+            }
+
             Destroy(target);
         }
-
         UpdateUIHealth();
         StartCoroutine(Healing());
         return _health;
