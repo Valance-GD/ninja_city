@@ -5,10 +5,11 @@ public class GameController : MonoBehaviour
 {
     public static GameController Instance { get; private set; }
     private SaveSystem saveSystem;
-    private GameData gameData;
+    public GameData gameData;
     private float saveInterval = 90f; // sec
     private float nextSaveTime;
     [SerializeField] private bool _startFromBegining;
+    [SerializeField] private BaseAiHouse _houseAI;
 
     private void Awake()
     {
@@ -34,6 +35,7 @@ public class GameController : MonoBehaviour
         {
             gameData = new GameData();
             InitializeGameData();
+            _startFromBegining = false;
         }
 
         // Завантажте дані у відповідні елементи гри, якщо потрібно
@@ -119,5 +121,6 @@ public class GameController : MonoBehaviour
                 Debug.LogWarning("Building not found: " + building.buildingName);
             }
         }
+        _houseAI._alliveAICount = gameData.alliveNinja;
     }
 }

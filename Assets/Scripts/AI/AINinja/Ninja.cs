@@ -11,6 +11,7 @@ public class Ninja : BaseAi
     {
         base.Start();
         StartCoroutine(StartFollowing(_player));
+        
     }
     public void StartMoveToTarget()
     {

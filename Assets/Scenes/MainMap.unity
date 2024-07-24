@@ -124,74 +124,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 939b8fb17f8d95f4a89e5d7020e1a14c, type: 2}
---- !u!1001 &62972133
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3050490293656799439, guid: 4cde73ceea35fb4479eae902e6bb4500,
-        type: 3}
-      propertyPath: m_Name
-      value: NinjaHousemillFullPref (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5891392833290250688, guid: 4cde73ceea35fb4479eae902e6bb4500,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11.538354
-      objectReference: {fileID: 0}
-    - target: {fileID: 5891392833290250688, guid: 4cde73ceea35fb4479eae902e6bb4500,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.738808
-      objectReference: {fileID: 0}
-    - target: {fileID: 5891392833290250688, guid: 4cde73ceea35fb4479eae902e6bb4500,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -7.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 5891392833290250688, guid: 4cde73ceea35fb4479eae902e6bb4500,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5891392833290250688, guid: 4cde73ceea35fb4479eae902e6bb4500,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5891392833290250688, guid: 4cde73ceea35fb4479eae902e6bb4500,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5891392833290250688, guid: 4cde73ceea35fb4479eae902e6bb4500,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5891392833290250688, guid: 4cde73ceea35fb4479eae902e6bb4500,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5891392833290250688, guid: 4cde73ceea35fb4479eae902e6bb4500,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5891392833290250688, guid: 4cde73ceea35fb4479eae902e6bb4500,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4cde73ceea35fb4479eae902e6bb4500, type: 3}
 --- !u!1 &111457568
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,7 +477,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43d459ba684b0f42bca18fbc5c64d0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameData:
+    buildings: []
+    resources: []
+    alliveNinja: 0
   _startFromBegining: 0
+  _houseAI: {fileID: 1433273950}
 --- !u!1001 &691365570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1386,6 +1323,18 @@ MonoBehaviour:
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 5000
+--- !u!114 &1433273950 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 592098193618288636, guid: 4cde73ceea35fb4479eae902e6bb4500,
+    type: 3}
+  m_PrefabInstance: {fileID: 1173535444337286863}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e8d11f5c663214fae891d7abf033fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1453343424 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3491664539692423121, guid: 139583bdf20898d4da705f871474f028,
@@ -1708,6 +1657,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 592098193618288636, guid: 4cde73ceea35fb4479eae902e6bb4500,
+        type: 3}
+      propertyPath: _alliveAICountMax
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3050490293656799439, guid: 4cde73ceea35fb4479eae902e6bb4500,
         type: 3}
       propertyPath: m_Name
@@ -2257,7 +2211,6 @@ SceneRoots:
   - {fileID: 691365570}
   - {fileID: 918430210}
   - {fileID: 1173535444337286863}
-  - {fileID: 62972133}
   - {fileID: 3035642583625167599}
   - {fileID: 1906052071704883806}
   - {fileID: 1450789374115487401}

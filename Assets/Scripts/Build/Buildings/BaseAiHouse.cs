@@ -6,17 +6,20 @@ public abstract class BaseAiHouse : MonoBehaviour
 {
 
     [SerializeField] protected float _secondToSpawn;
-    [SerializeField] protected int _alliveAICount;
+    [SerializeField] protected int _alliveAICountMax;
     [SerializeField] protected GameObject _AIPrefab;
     [SerializeField] protected Transform _respawnPoint;
     [SerializeField] protected int _foodForRespawn;
     protected List<GameObject> _allaviAIList;
+    public int _alliveAICount;
     protected Coroutine respawnCoroutine;
     private void Start()
     {
         _allaviAIList = new List<GameObject>();
+        RespawnInStart();
         AIDie();
     }
+
     public virtual void AIDie(GameObject target = null)
     {
         if (target != null)
@@ -32,14 +35,10 @@ public abstract class BaseAiHouse : MonoBehaviour
     }
     private IEnumerator RespawnHuman()
     {
-        if (ResurcesManager.Instance.SpendResource("Food", _foodForRespawn))
+        while (_allaviAIList.Count < _alliveAICountMax && ResurcesManager.Instance.SpendResource("Food", _foodForRespawn))
         {
-            while (_allaviAIList.Count < _alliveAICount)
-            {
-
                 yield return new WaitForSeconds(_secondToSpawn);
                 RespawnProcess();
-            }
         }
         respawnCoroutine = null;
         StopAllCoroutines();
@@ -47,5 +46,13 @@ public abstract class BaseAiHouse : MonoBehaviour
     protected virtual void RespawnProcess()
     {
 
+    }
+    private void RespawnInStart()
+    {
+        for (int i = 0; i < _alliveAICount; i++)
+        {
+
+            RespawnProcess();
+        } 
     }
 }

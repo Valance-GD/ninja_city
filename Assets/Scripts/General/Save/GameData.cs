@@ -6,7 +6,7 @@ public class GameData
 {
    public List<Building> buildings;
     public List<Resource> resources;
-
+    public int alliveNinja;
     public GameData()
     {
         buildings = new List<Building>();

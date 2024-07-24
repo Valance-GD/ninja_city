@@ -265,7 +265,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _endBattleUI: {fileID: 2066363781}
+  _ninjaPrefab: {fileID: 3375876193248671410, guid: 137311f8289099941980a83bf685b48d,
+    type: 3}
+  _ninjaSpawnPoint: {fileID: 1418056134}
   _winMoney: 50
+  _isOnLevel: 1
+  boxCollider: {fileID: 1418056135}
 --- !u!4 &138382371
 Transform:
   m_ObjectHideFlags: 0
@@ -281,74 +286,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1828154140}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &173827240
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.6677346
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.6775007
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -16.130505
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3375876193248671410, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_Name
-      value: Ninja
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 137311f8289099941980a83bf685b48d, type: 3}
 --- !u!1 &176639271
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,142 +718,6 @@ Transform:
   - {fileID: 1882538565}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &691340511
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.56221676
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.6774998
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -16.028973
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3375876193248671410, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_Name
-      value: Ninja (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 137311f8289099941980a83bf685b48d, type: 3}
---- !u!1001 &750132793
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.8109384
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.6774998
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -16.4091
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 526447675735907578, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3375876193248671410, guid: 137311f8289099941980a83bf685b48d,
-        type: 3}
-      propertyPath: m_Name
-      value: Ninja (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 137311f8289099941980a83bf685b48d, type: 3}
 --- !u!1 &771645958
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,6 +1060,59 @@ Transform:
   - {fileID: 1951730900}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1418056133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1418056134}
+  - component: {fileID: 1418056135}
+  m_Layer: 0
+  m_Name: ninjaSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1418056134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418056133}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.988, y: 1.92, z: -12.755}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1418056135
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418056133}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: -10.48, y: 1.48, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1420094308
 GameObject:
   m_ObjectHideFlags: 0
@@ -3321,6 +3175,4 @@ SceneRoots:
   - {fileID: 204211116}
   - {fileID: 1559576650}
   - {fileID: 689362285}
-  - {fileID: 173827240}
-  - {fileID: 691340511}
-  - {fileID: 750132793}
+  - {fileID: 1418056134}
