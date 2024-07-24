@@ -42,13 +42,6 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        // Регулярне збереження
-        if (Time.time >= nextSaveTime)
-        {
-            SaveGameData();
-            saveSystem.SaveGame(gameData);
-            nextSaveTime = Time.time + saveInterval;
-        }
 
         // Для тестування збереження та завантаження
         if (Input.GetKeyDown(KeyCode.S))
@@ -97,6 +90,10 @@ public class GameController : MonoBehaviour
                 existingResource.quantity = resource.Value;
             }
         }
+        foreach (Building building in BuildManager.Instance._buildings)
+        {
+            gameData.buildings.Add(building);
+        }
     }
     public void ApplyGameData(GameData gameData)
     {
@@ -109,6 +106,18 @@ public class GameController : MonoBehaviour
             ResurcesManager.Instance._resources[resource.resourceName] = resource.quantity;
             ResurcesManager.Instance.UpdateUI(resource.resourceName);
         }
-        // Тепер _resources містить оновлені значення з gameData
+        foreach (Building building in gameData.buildings)
+        {
+            //BuildManager.Instance._buildings.Add(building);
+            GameObject buildingObject = GameObject.Find(building.buildingName);
+            if (buildingObject != null)
+            {
+                buildingObject.GetComponentInChildren<BuildButton>().BuildHouse();
+            }
+            else
+            {
+                Debug.LogWarning("Building not found: " + building.buildingName);
+            }
+        }
     }
 }

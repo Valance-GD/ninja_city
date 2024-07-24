@@ -18,7 +18,7 @@ public class GameData
 public class Building
 {
     public string buildingName;
-    public int quantity;
+    public bool isBuild;
     //public int level;
 }
 

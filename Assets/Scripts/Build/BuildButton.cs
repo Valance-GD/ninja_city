@@ -12,10 +12,19 @@ public class BuildButton : MonoBehaviour
 
             if (ResurcesManager.Instance.SpendResource(_resoursTypeToBuild, _resoursAmountToBuild))
             {
-                _building.SetActive(true);
-                Destroy(gameObject);
+                BuildHouse();
+                GameController.Instance.Save();
             }
 
         }
+    }
+    public void BuildHouse()
+    {
+        Building newBuilding = new Building();
+        newBuilding.buildingName = transform.parent.name;
+        newBuilding.isBuild = true;
+        BuildManager.Instance._buildings.Add(newBuilding);
+        _building.SetActive(true);
+        Destroy(gameObject);
     }
 }
