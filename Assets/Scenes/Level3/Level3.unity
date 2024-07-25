@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 9bbb08dfd37782d419972306dc667dbe, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: e599c8f64ff7bb64482e07d3b910b68a, type: 2}
 --- !u!4 &13825160 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 635143922761849932, guid: f4ac2471daec07d418967f193a0328e0,
@@ -264,11 +264,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f89e0736e9a594f96b066f7a4fc376, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _winMoney: 100
+  _winMoney: 200
   _endBattleUI: {fileID: 2066363781}
   _ninjaPrefab: {fileID: 3375876193248671410, guid: 137311f8289099941980a83bf685b48d,
     type: 3}
-  _ninjaSpawnPoint: {fileID: 1418056134}
   _isOnLevel: 1
   boxCollider: {fileID: 1418056135}
 --- !u!4 &138382371
@@ -412,7 +411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemy: {fileID: 3899186183047840689, guid: 2d786e697c248d344b26f79ae0001c83, type: 3}
-  _countEnemy: 3
+  _countEnemy: 6
   _enemySpawn: {fileID: 771645959}
   _isFinalBatttle: 0
 --- !u!65 &204211114
@@ -973,6 +972,7 @@ GameObject:
   - component: {fileID: 689362284}
   - component: {fileID: 689362283}
   - component: {fileID: 689362282}
+  - component: {fileID: 689362286}
   m_Layer: 0
   m_Name: Wave (2)
   m_TagString: Untagged
@@ -992,8 +992,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f89bdd00e770f48a1e6fe5379e4b64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 3899186183047840689, guid: 2d786e697c248d344b26f79ae0001c83, type: 3}
-  _countEnemy: 7
+  _enemy: {fileID: 3899186183047840689, guid: 356f20ab64e825a4c8bd1dd0b8140450, type: 3}
+  _countEnemy: 1
   _enemySpawn: {fileID: 1882538565}
   _isFinalBatttle: 1
 --- !u!65 &689362283
@@ -1041,6 +1041,22 @@ Transform:
   - {fileID: 1882538565}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &689362286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689362281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7f89bdd00e770f48a1e6fe5379e4b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemy: {fileID: 3899186183047840689, guid: 2d786e697c248d344b26f79ae0001c83, type: 3}
+  _countEnemy: 10
+  _enemySpawn: {fileID: 1882538565}
+  _isFinalBatttle: 0
 --- !u!1 &771645958
 GameObject:
   m_ObjectHideFlags: 0
@@ -1852,7 +1868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemy: {fileID: 3899186183047840689, guid: 2d786e697c248d344b26f79ae0001c83, type: 3}
-  _countEnemy: 5
+  _countEnemy: 10
   _enemySpawn: {fileID: 1420094309}
   _isFinalBatttle: 0
 --- !u!65 &1559576648

@@ -42,7 +42,7 @@ public class Settings : MonoBehaviour
             _musicButton.onClick.AddListener(TurnOnMusic);
         }
     }
-    private void Update()
+    private void Update() // поміняти на юі
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {

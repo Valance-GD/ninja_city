@@ -10,7 +10,6 @@ public class BattleManager : MonoBehaviour
 
     [Header("Level")]
     [SerializeField] private GameObject _ninjaPrefab;
-    [SerializeField] private BoxCollider _ninjaSpawnPoint;
     [SerializeField] private bool _isOnLevel;
     private void Awake()
     {
