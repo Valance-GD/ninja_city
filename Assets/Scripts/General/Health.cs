@@ -43,7 +43,7 @@ public class Health : MonoBehaviour
             }
             else if (target.TryGetComponent(out Enemy enemy))
             {
-                BattleManager.Instance.EnemyDie(target);
+                BattleManager.Instance?.EnemyDie(target);
             }
 
             Destroy(target);

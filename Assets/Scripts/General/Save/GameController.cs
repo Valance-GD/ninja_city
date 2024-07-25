@@ -122,5 +122,6 @@ public class GameController : MonoBehaviour
             }
         }
         _houseAI._alliveAICount = gameData.alliveNinja;
+        Settings.Instance.isMusicOn = gameData.isMusicOn;
     }
 }

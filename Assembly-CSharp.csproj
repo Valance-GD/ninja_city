@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\General\Save\SaveSystem.cs" />
     <Compile Include="Assets\Scripts\Build\Buildings\Sawmill.cs" />
     <Compile Include="Assets\Scripts\Build\BuildManager.cs" />
+    <Compile Include="Assets\Scripts\General\SoundManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Scripts\AI\Human.cs" />
     <Compile Include="Assets\Scripts\Build\Buildings\HumanHouse.cs" />
@@ -129,6 +130,7 @@
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\Scripts\Build\Buildings\BaseHouse.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\Scripts\General\Settings.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\Scripts\Build\RespawnAI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />

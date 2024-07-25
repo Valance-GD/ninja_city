@@ -35,7 +35,7 @@ public class Ninja : BaseAi
     private IEnumerator StartAtacking()
     {
         _gameObjectNavMesh.stoppingDistance = 2.5f;
-        _gameObjectNavMesh.speed = 2.5f;
+        _gameObjectNavMesh.speed = 5f;
         while (true)
         {
             MoveToClosestTarget(true);
@@ -46,7 +46,7 @@ public class Ninja : BaseAi
     {
         _animator.SetBool("isStopped", false);
         _gameObjectNavMesh.stoppingDistance = 4;
-        _gameObjectNavMesh.speed = 4;
+        _gameObjectNavMesh.speed = 3;
         while (true)
         {
             _gameObjectNavMesh.SetDestination(target.position);
