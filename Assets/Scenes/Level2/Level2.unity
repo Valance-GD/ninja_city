@@ -268,8 +268,9 @@ MonoBehaviour:
   _endBattleUI: {fileID: 2066363781}
   _ninjaPrefab: {fileID: 3375876193248671410, guid: 137311f8289099941980a83bf685b48d,
     type: 3}
-  _ninjaSpawnPoint: {fileID: 1418056134}
   _isOnLevel: 1
+  _levelsInMap: []
+  currentLevel: 0
   boxCollider: {fileID: 1418056135}
 --- !u!4 &138382371
 Transform:
@@ -2372,6 +2373,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 138382370}
+        m_TargetAssemblyTypeName: BattleManager, Assembly-CSharp
+        m_MethodName: SwitchToNextLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

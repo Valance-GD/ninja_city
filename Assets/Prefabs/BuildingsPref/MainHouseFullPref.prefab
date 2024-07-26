@@ -82,6 +82,7 @@ MonoBehaviour:
     type: 3}
   resourceHeight: 0.12
   resourceRotation: 0
+  _resMaxAmount: 20
 --- !u!65 &8995381955975277995
 BoxCollider:
   m_ObjectHideFlags: 0

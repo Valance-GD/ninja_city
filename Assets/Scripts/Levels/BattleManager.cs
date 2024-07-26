@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BattleManager : MonoBehaviour
 {
@@ -10,7 +11,10 @@ public class BattleManager : MonoBehaviour
 
     [Header("Level")]
     [SerializeField] private GameObject _ninjaPrefab;
+    [SerializeField] private Sprite _openLevelIcon;
     [SerializeField] private bool _isOnLevel;
+    [SerializeField] private  List<Button> _levelsInMap ;
+    public static int currentLevel;
     private void Awake()
     {
         if (Instance == null)
@@ -27,8 +31,26 @@ public class BattleManager : MonoBehaviour
         {
             PlaceObjectInRandomPosition();
         }
+        OpenCurrentLevel();       
     }
 
+    public void SwitchToNextLevel()
+    {
+        currentLevel++;
+        GameController.Instance.Save();
+    }
+    private void OpenCurrentLevel()
+    {
+        if (_levelsInMap.Count>0)
+        {
+            _levelsInMap[currentLevel].enabled = true;
+            _levelsInMap[currentLevel].GetComponent<Image>().sprite = _openLevelIcon;   
+        }
+        else
+        {
+            Debug.Log("Not Main Map");
+        }
+    }
     private void PlaceObjectInRandomPosition()
     {
         for (int i = 0; i < GameController.Instance.gameData.alliveNinja; i++)

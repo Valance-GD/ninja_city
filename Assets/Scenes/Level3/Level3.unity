@@ -268,7 +268,9 @@ MonoBehaviour:
   _endBattleUI: {fileID: 2066363781}
   _ninjaPrefab: {fileID: 3375876193248671410, guid: 137311f8289099941980a83bf685b48d,
     type: 3}
+  _openLevelIcon: {fileID: 0}
   _isOnLevel: 1
+  _levelsInMap: []
   boxCollider: {fileID: 1418056135}
 --- !u!4 &138382371
 Transform:

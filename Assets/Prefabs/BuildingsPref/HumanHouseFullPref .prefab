@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 6231237189931891148}
   - component: {fileID: 7908809009851072326}
   - component: {fileID: 6096892600026646850}
+  - component: {fileID: 3135013844731596341}
   m_Layer: 0
   m_Name: Respawn
   m_TagString: Untagged
@@ -224,6 +225,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _house: {fileID: 448758939064246646}
+--- !u!114 &3135013844731596341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4546889872157939587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 123ff7af6aea4c9458668f2321bf6aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourcePrefab: {fileID: 7867370045430620076, guid: 6292c18f781ce5c4ca772b5763f70efd,
+    type: 3}
+  resourceHeight: 0.1
+  resourceRotation: 0
+  _resMaxAmount: 20
 --- !u!1 &4929933112534450325
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,6 +316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6394172636656980411}
   - component: {fileID: 448758939064246646}
+  - component: {fileID: 486283100596061687}
   m_Layer: 0
   m_Name: HumanHouse
   m_TagString: Untagged
@@ -338,11 +357,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _secondToSpawn: 5
-  _alliveAICount: 2
+  _alliveAICountMax: 0
   _AIPrefab: {fileID: 1165511562456469879, guid: 30b466e27396ffa4aa5a4bde71d3ae0a,
     type: 3}
   _respawnPoint: {fileID: 681502081328675333}
   _foodForRespawn: 10
+  _alliveAICount: 2
+--- !u!114 &486283100596061687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6678636715812093591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a833fac25eb8a64f8e8d1986b01e7ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _secondToCollect: 5
+  _resAmount: 10
+  _resourseType: Money
+  _spawnResPoint: {fileID: 3135013844731596341}
 --- !u!1 &7166401908180647583
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,8 +603,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _building: {fileID: 6678636715812093591}
-  _resoursAmountToBuild: 10
-  _resoursTypeToBuild: Food
+  _resoursAmountToBuild: 60
+  _resoursTypeToBuild: Wood
 --- !u!1001 &3356108726778183604
 PrefabInstance:
   m_ObjectHideFlags: 0

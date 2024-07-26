@@ -8,6 +8,7 @@ public class GameData
     public List<Resource> resources;
     public int alliveNinja;
     public bool isMusicOn;
+    public int currentLevel;
     public GameData()
     {
         buildings = new List<Building>();

@@ -176,8 +176,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthImage: {fileID: 7129787797187886361}
-  _health: 100
-  _healingSpeed: 5
+  _health: 200
+  _healingSpeed: 30
 --- !u!114 &4385360775632703281
 MonoBehaviour:
   m_ObjectHideFlags: 0
