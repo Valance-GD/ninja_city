@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public abstract class BattleManager : MonoBehaviour
 {
     public static BattleManager Instance { get; private set; }

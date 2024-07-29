@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ResurcesManager : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class ResurcesManager : MonoBehaviour
     }
     private void Start()
     {
+        
         InitializeResource();
         UpdateAllResourcesUI();
     }

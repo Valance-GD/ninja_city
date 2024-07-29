@@ -1094,6 +1094,7 @@ MonoBehaviour:
     alliveNinja: 0
     isMusicOn: 0
     currentLevel: 0
+    currentMap: 0
   _startFromBegining: 0
   _houseAI: {fileID: 1433273950}
 --- !u!1 &587881459

@@ -377,18 +377,6 @@ Transform:
   - {fileID: 1428097690}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 35, y: 0, z: 0}
---- !u!114 &387134138 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9028738189091488156, guid: 139583bdf20898d4da705f871474f028,
-    type: 3}
-  m_PrefabInstance: {fileID: 8788026461556968668}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &408136043
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,6 +575,7 @@ MonoBehaviour:
     alliveNinja: 0
     isMusicOn: 0
     currentLevel: 0
+    currentMap: 0
   _startFromBegining: 0
   _houseAI: {fileID: 0}
 --- !u!1 &705507993
@@ -1373,18 +1362,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buildings: []
---- !u!114 &1649179801 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1544502425792337917, guid: 139583bdf20898d4da705f871474f028,
-    type: 3}
-  m_PrefabInstance: {fileID: 8788026461556968668}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1665165545 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2276011474474846884, guid: 139583bdf20898d4da705f871474f028,
@@ -1447,16 +1424,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f89e0736e9a594f96b066f7a4fc376, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _winMoney: 0
-  _endBattleUI: {fileID: 0}
-  _ninjaPrefab: {fileID: 0}
-  _openLevelIcon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  _isOnLevel: 0
-  _levelsInMap:
-  - {fileID: 1649179801}
-  - {fileID: 387134138}
-  - {fileID: 766956447}
-  boxCollider: {fileID: 0}
 --- !u!1 &1783403042
 GameObject:
   m_ObjectHideFlags: 0

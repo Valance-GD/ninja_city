@@ -1,5 +1,7 @@
+using System.Collections;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -10,20 +12,20 @@ public class GameController : MonoBehaviour
     private float nextSaveTime;
     [SerializeField] private bool _startFromBegining;
     [SerializeField] private BaseAiHouse _houseAI;
-
+    private static bool isStart = true;
     private void Awake()
     {
 
         if (Instance == null)
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject); // Переконуємося, що об'єкт не знищується при завантаженні нової сцени
+            Instance = this;  
         }
         else
         {
             Debug.LogError("oneMoreGameController");
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
+        
     }
     private void Start()
     {
@@ -37,24 +39,14 @@ public class GameController : MonoBehaviour
             InitializeGameData();
             _startFromBegining = false;
         }
-
+        if (isStart)
+        {
+            SceneManager.LoadScene(gameData.currentMap);
+            isStart = false;
+        }
         // Завантажте дані у відповідні елементи гри, якщо потрібно
         ApplyGameData(gameData);
-    }
-
-    private void Update()
-    {
-
-        // Для тестування збереження та завантаження
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            Save();
-        }
-
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Load();
-        }
+        
     }
 
     private void OnApplicationQuit()
@@ -122,7 +114,10 @@ public class GameController : MonoBehaviour
                 Debug.LogWarning("Building not found: " + building.buildingName);
             }
         }
-        _houseAI._alliveAICount = gameData.alliveNinja;
+        if(_houseAI != null)
+        {
+            _houseAI._alliveAICount = gameData.alliveNinja;
+        }       
         Settings.Instance.isMusicOn = gameData.isMusicOn;
         LevelManager.currentLevel = gameData.currentLevel;
     }

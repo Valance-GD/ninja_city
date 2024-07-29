@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
+
 public class BuildButton : MonoBehaviour
 {
     [SerializeField] private GameObject _building;
@@ -12,6 +13,7 @@ public class BuildButton : MonoBehaviour
     [SerializeField] private GameObject _spendEffect;
     private void Start()
     {
+        
         _resoursAmountDef = _resoursAmountToBuild;
         _leftAmountText.text = _resoursAmountToBuild.ToString();
     }
