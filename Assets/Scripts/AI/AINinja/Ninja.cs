@@ -7,6 +7,7 @@ using UnityEngine.AI;
 public class Ninja : BaseAi
 {
     public NinjaHouse _ninjaHouse;
+    private bool isAttack;
     protected override void Start()
     {
         base.Start();
@@ -16,40 +17,53 @@ public class Ninja : BaseAi
     public void StartMoveToTarget()
     {
         StopAllCoroutines();
-        StartCoroutine(StartAtacking());
+        StartAtacking();
     }
-    protected override void AIMove(Transform target)
+    private void Update()
+    {
+        if(isAttack)
+        {
+            MoveToClosestTarget(_attackTime,true);
+        }
+    }
+    protected override void AIMove(Transform target, float attackTime, bool isNinja = false)
     {
         if (target == _player)
         {
             StopAllCoroutines();
-            
+            isAttack = false;
             StartCoroutine(StartFollowing(target));
         }
         else
         {
-            base.AIMove(target);
+            base.AIMove(target, attackTime, true);
         }
             
     }
-    private IEnumerator StartAtacking()
+    private void StartAtacking()
     {
-        _gameObjectNavMesh.stoppingDistance = 2.5f;
+        _gameObjectNavMesh.stoppingDistance = 1.5f;
         _gameObjectNavMesh.speed = 5f;
-        while (true)
-        {
-            MoveToClosestTarget(true);
-            yield return new WaitForSeconds(0.5f);
-        }
+        isAttack = true;
     }
     private IEnumerator StartFollowing(Transform target)
     {
-        _animator.SetBool("isStopped", false);
-        _gameObjectNavMesh.stoppingDistance = 4;
+        _animator.SetBool("isStopped", false);      
+        _animator.SetBool("isAttack", false);
+        _gameObjectNavMesh.stoppingDistance = 2;
         _gameObjectNavMesh.speed = 3;
+        
         while (true)
         {
             _gameObjectNavMesh.SetDestination(target.position);
+            if (_gameObjectNavMesh.velocity.sqrMagnitude < 0.1f && _gameObjectNavMesh.remainingDistance <= _gameObjectNavMesh.stoppingDistance)
+            {
+                _animator.SetBool("isStoppedPlayer", true);  
+            }
+            else
+            {    
+                _animator.SetBool("isStoppedPlayer", false);
+            }
             yield return new WaitForSeconds(0.5f);
         }
     }

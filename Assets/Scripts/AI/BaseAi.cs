@@ -1,7 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -11,15 +8,18 @@ public abstract class BaseAi : MonoBehaviour
     protected Transform _player;
     [SerializeField] protected Animator _animator;
     [SerializeField] protected float _damage;
+    [SerializeField] protected float _attackTime;
     [SerializeField] protected int _addResurseAmount;
     [SerializeField] protected string _targetTag;
+    private float defTime;
     public int AddResourseAmount => _addResurseAmount;
     protected virtual void Start()
     {
         _gameObjectNavMesh = GetComponent<NavMeshAgent>();
         _player = FindObjectOfType<PlayerController>().transform;
+        defTime = _attackTime;
     }
-    protected virtual void MoveToClosestTarget(bool isNinja)
+    protected virtual void MoveToClosestTarget(float attackTime, bool isNinja = false)
     {
         Transform closestTarget = null;
         float closestDistance = Mathf.Infinity;
@@ -30,7 +30,7 @@ public abstract class BaseAi : MonoBehaviour
         {
             targets.Add(enemy.transform);
         }
-        if(isNinja&& enemys.Length ==0)
+        if (isNinja && enemys.Length == 0)
         {
             targets.Add(_player);
         }
@@ -47,10 +47,18 @@ public abstract class BaseAi : MonoBehaviour
                 closestTarget = target;
             }
         }
-        AIMove(closestTarget);
-        
+        AIMove(closestTarget, attackTime, isNinja);
+
     }
-    protected virtual void AIMove(Transform target)
+    private void Attack( Transform target)
+    {
+        if (target != null)
+        {
+            target.GetComponent<Health>().TakeDamage(_damage, target.gameObject);
+            _attackTime = defTime;
+        }
+    }
+    protected virtual void AIMove(Transform target, float attackTime, bool isNinja = false)
     {
         if (target == null)
         {
@@ -58,24 +66,52 @@ public abstract class BaseAi : MonoBehaviour
         }
         _gameObjectNavMesh.SetDestination(target.position);
 
-        if (_gameObjectNavMesh.velocity.sqrMagnitude < 0.1f && _gameObjectNavMesh.remainingDistance <= _gameObjectNavMesh.stoppingDistance && _gameObjectNavMesh.remainingDistance!=0)
+        if (_gameObjectNavMesh.velocity.sqrMagnitude < 0.1f && _gameObjectNavMesh.remainingDistance <= _gameObjectNavMesh.stoppingDistance && _gameObjectNavMesh.remainingDistance != 0)
         {
-            Debug.Log(_gameObjectNavMesh.remainingDistance);
-            _animator.SetBool("isStopped", true);
-            if(target.TryGetComponent(out BaseAi ai))
+
+            Ray ray = new Ray(transform.position, transform.forward);
+            Debug.DrawRay(transform.position, transform.forward, Color.red);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 6))
             {
-                target.GetComponent<Health>().TakeDamage(_damage, target.gameObject, ai.AddResourseAmount);
+
+                if (isNinja)
+                {
+                    _animator.SetBool("isAttack", false);
+                }
+                _animator.SetBool("isStopped", true);
+
+                if (hit.collider.gameObject == target.gameObject)
+                {
+                    if(_attackTime <=0)
+                    {
+                        Attack(target);
+                    }
+                    else
+                    {
+                        _attackTime -=Time.deltaTime;
+                    }
+                }
+                else
+                {
+                    _gameObjectNavMesh.transform.LookAt(target.transform);
+
+                }
             }
-            else// змінити
+            else
             {
-                target.GetComponent<Health>().TakeDamage(_damage,target.gameObject);
+                _gameObjectNavMesh.transform.LookAt(target.transform);
             }
-            
         }
         else
         {
+            if (isNinja)
+            {
+                _animator.SetBool("isAttack", true);
+            }
             _animator.SetBool("isStopped", false);
+
         }
     }
-    
 }

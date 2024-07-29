@@ -8,7 +8,6 @@ public class Enemy : BaseAi
     protected override void Start()
     {
         base.Start();
-        StartCoroutine(StartAtacking());
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -17,13 +16,8 @@ public class Enemy : BaseAi
             _gameObjectNavMesh.GetComponent<Health>().TakeDamage(sword.Damage, gameObject, _addResurseAmount);
         }
     }
-    private IEnumerator StartAtacking()
-    {     
-        while (true)
-        {
-            MoveToClosestTarget(false);
-            yield return new WaitForSeconds(0.5f);
-        }
-        
+    private void Update()
+    {
+        MoveToClosestTarget(_attackTime,false);       
     }
 }
