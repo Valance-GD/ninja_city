@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "D:\\Games\\NinjaCity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|d:\\games\\ninjacity\\assets\\scripts\\ai\\baseai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ai\\baseai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|D:\\Games\\NinjaCity\\assets\\scripts\\levels\\levelsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levels\\levelsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|D:\\Games\\NinjaCity\\assets\\scripts\\ai\\aininja\\ninja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ai\\aininja\\ninja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|d:\\games\\ninjacity\\assets\\scripts\\levels\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levels\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|D:\\Games\\NinjaCity\\assets\\scripts\\ai\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ai\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|D:\\Games\\NinjaCity\\assets\\scripts\\levels\\battlemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levels\\battlemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|d:\\games\\ninjacity\\assets\\scripts\\levels\\maplevelui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levels\\maplevelui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|D:\\Games\\NinjaCity\\assets\\scripts\\levels\\levelwavetrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levels\\levelwavetrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|D:\\Games\\NinjaCity\\assets\\scripts\\general\\save\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\general\\save\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,40 +54,79 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Enemy.cs",
-              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\AI\\Enemy\\Enemy.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\AI\\Enemy\\Enemy.cs",
-              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\AI\\Enemy\\Enemy.cs",
-              "RelativeToolTip": "Assets\\Scripts\\AI\\Enemy\\Enemy.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAgwBcAAAAUAAAA",
+              "DocumentIndex": 3,
+              "Title": "MapLevelUI.cs",
+              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Levels\\MapLevelUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Levels\\MapLevelUI.cs",
+              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Levels\\MapLevelUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Levels\\MapLevelUI.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAAA4AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-27T14:48:38.776Z"
+              "WhenOpened": "2024-07-29T14:07:38.675Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BaseAi.cs",
-              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\AI\\BaseAi.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\AI\\BaseAi.cs",
-              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\AI\\BaseAi.cs",
-              "RelativeToolTip": "Assets\\Scripts\\AI\\BaseAi.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAgwEMAAAAAAAAA",
+              "DocumentIndex": 5,
+              "Title": "GameController.cs",
+              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\General\\Save\\GameController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\General\\Save\\GameController.cs",
+              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\General\\Save\\GameController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\General\\Save\\GameController.cs",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAQwGIAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-27T14:47:08.542Z",
+              "WhenOpened": "2024-07-29T12:58:53.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LevelWaveTrigger.cs",
+              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Levels\\LevelWaveTrigger.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Levels\\LevelWaveTrigger.cs",
+              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Levels\\LevelWaveTrigger.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Levels\\LevelWaveTrigger.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T13:45:42.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BattleManager.cs",
+              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Levels\\BattleManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Levels\\BattleManager.cs",
+              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Levels\\BattleManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Levels\\BattleManager.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAA9wAcAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T12:45:03.017Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Ninja.cs",
-              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\AI\\AINinja\\Ninja.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\AI\\AINinja\\Ninja.cs",
-              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\AI\\AINinja\\Ninja.cs",
-              "RelativeToolTip": "Assets\\Scripts\\AI\\AINinja\\Ninja.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAQwDIAAAAIAAAA",
+              "Title": "LevelManager.cs",
+              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Levels\\LevelManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Levels\\LevelManager.cs",
+              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Levels\\LevelManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Levels\\LevelManager.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwAYAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-27T14:44:37.059Z"
+              "WhenOpened": "2024-07-29T12:52:32.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LevelSetting.cs",
+              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Levels\\LevelSetting.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Levels\\LevelSetting.cs",
+              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Levels\\LevelSetting.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Levels\\LevelSetting.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAwwCkAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T12:45:32.485Z",
+              "EditorCaption": ""
             }
           ]
         }

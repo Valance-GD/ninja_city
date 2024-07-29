@@ -1429,7 +1429,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3117,19 +3117,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1731022057}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37f89e0736e9a594f96b066f7a4fc376, type: 3}
+  m_Script: {fileID: 11500000, guid: 922016c596b20fb439a384d6ec5c9a5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _winMoney: 0
-  _endBattleUI: {fileID: 0}
-  _ninjaPrefab: {fileID: 0}
-  _openLevelIcon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  _isOnLevel: 0
   _levelsInMap:
   - {fileID: 1649179801}
   - {fileID: 387134138}
   - {fileID: 766956447}
-  boxCollider: {fileID: 0}
+  _openLevelIcon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1754638996
 GameObject:
   m_ObjectHideFlags: 0
@@ -4419,6 +4414,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028738189091488156, guid: 139583bdf20898d4da705f871474f028,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

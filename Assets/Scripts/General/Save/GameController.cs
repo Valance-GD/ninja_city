@@ -96,7 +96,7 @@ public class GameController : MonoBehaviour
         {
             gameData.buildings.Add(building);
         }
-        gameData.currentLevel = BattleManager.currentLevel;
+        gameData.currentLevel = LevelManager.currentLevel;
     }
     public void ApplyGameData(GameData gameData)
     {
@@ -124,6 +124,6 @@ public class GameController : MonoBehaviour
         }
         _houseAI._alliveAICount = gameData.alliveNinja;
         Settings.Instance.isMusicOn = gameData.isMusicOn;
-        BattleManager.currentLevel = gameData.currentLevel;
+        LevelManager.currentLevel = gameData.currentLevel;
     }
 }
