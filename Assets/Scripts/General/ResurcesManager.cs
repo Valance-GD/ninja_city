@@ -57,7 +57,7 @@ public class ResurcesManager : MonoBehaviour
 
     public bool SpendResource(string resourceName, int amount)
     {
-
+        // добавити сюди спавн відповідного ефетку за назвою в словнику
         if (_resources.ContainsKey(resourceName))
         {
             if (_resources[resourceName] >= amount)

@@ -5,7 +5,7 @@ public class LevelManager : BattleManager
 {
     [SerializeField] private GameObject _ninjaPrefab;
     [SerializeField] private List<LevelSetting> _levels;
-    public BoxCollider boxCollider;
+    public BoxCollider boxCollider; 
     public static int currentLevel;
 
     protected override void Start()

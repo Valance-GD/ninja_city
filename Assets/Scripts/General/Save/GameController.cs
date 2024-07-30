@@ -8,8 +8,6 @@ public class GameController : MonoBehaviour
     public static GameController Instance { get; private set; }
     private SaveSystem saveSystem;
     public GameData gameData;
-    private float saveInterval = 90f; // sec
-    private float nextSaveTime;
     [SerializeField] private bool _startFromBegining;
     [SerializeField] private BaseAiHouse _houseAI;
     private static bool isStart = true;
@@ -59,6 +57,10 @@ public class GameController : MonoBehaviour
         SaveGameData();
         saveSystem.SaveGame(gameData);
     }
+    public void SaveNewData()
+    {
+        saveSystem.SaveGame(gameData);
+    }
     public void Load()
     {
         gameData = saveSystem.LoadGame();
@@ -88,6 +90,7 @@ public class GameController : MonoBehaviour
         {
             gameData.buildings.Add(building);
         }
+        BuildManager.Instance._buildings.Clear();
         gameData.currentLevel = LevelManager.currentLevel;
     }
     public void ApplyGameData(GameData gameData)
@@ -103,18 +106,18 @@ public class GameController : MonoBehaviour
         }
         foreach (Building building in gameData.buildings)
         {
-            //BuildManager.Instance._buildings.Add(building);
             GameObject buildingObject = GameObject.Find(building.buildingName);
             if (buildingObject != null)
             {
-                buildingObject.GetComponentInChildren<BuildButton>().BuildHouse();
+                buildingObject.GetComponentInChildren<BuildUpgradeButton>().LoadBuilding(building.level);
             }
             else
             {
                 Debug.LogWarning("Building not found: " + building.buildingName);
             }
         }
-        if(_houseAI != null)
+        BuildManager.Instance._buildings.Clear();
+        if (_houseAI != null)
         {
             _houseAI._alliveAICount = gameData.alliveNinja;
         }       

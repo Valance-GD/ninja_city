@@ -22,7 +22,7 @@ public class Building
 {
     public string buildingName;
     public bool isBuild;
-    //public int level;
+    public int level;
 }
 
 [Serializable]
@@ -33,7 +33,7 @@ public class Resource
 }
 public class GameDataManager
 {
-    public static GameData ResetGameData(GameData originalData)
+    public static void ResetGameData(GameData originalData)
     {
         GameData newData = new GameData
         { 
@@ -44,8 +44,9 @@ public class GameDataManager
         newData.buildings = new List<Building>(); 
         newData.alliveNinja = 0; 
         newData.isMusicOn = false; 
-        newData.currentLevel = 0; 
-       
-        return newData;
+        newData.currentLevel = 0;
+        GameController.Instance.gameData = newData;
+        GameController.Instance.SaveNewData();
+        
     }
 }
