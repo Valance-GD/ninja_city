@@ -8,6 +8,8 @@ public class Ninja : BaseAi
 {
     public NinjaHouse _ninjaHouse;
     private bool isAttack;
+    [SerializeField] private string _type;
+    public string Type => _type;
     protected override void Start()
     {
         base.Start();

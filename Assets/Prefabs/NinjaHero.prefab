@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 4614611095424516110}
   - component: {fileID: 4523390645271636172}
   m_Layer: 0
-  m_Name: Ninja
+  m_Name: NinjaHero
   m_TagString: Ninja
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,12 +162,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 7317546752828264299}
-  _damage: 15
-  _attackTime: 0.5
+  _damage: 40
+  _attackTime: 0.1
   _addResurseAmount: 0
   _targetTag: Enemy
   _ninjaHouse: {fileID: 0}
-  _type: Def
+  _type: DefHero
 --- !u!114 &4614611095424516110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,8 +181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthImage: {fileID: 6995331545284459137}
-  _health: 100
-  _healingSpeed: 20
+  _health: 150
+  _healingSpeed: 10
 --- !u!136 &4523390645271636172
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -644,7 +644,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 70599d2abfb51cf44b3844f4d0dc9d0a, type: 2}
+      objectReference: {fileID: 2100000, guid: f44bc5f7c74643d4db795161fecaf373, type: 2}
     m_RemovedComponents:
     - {fileID: 95389170962898660, guid: f11fc98cf1e8d5547a9b2ec85cc9c664, type: 3}
     m_RemovedGameObjects: []

@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "D:\\Games\\NinjaCity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|d:\\games\\ninjacity\\assets\\scripts\\build\\buildupgradebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\build\\buildupgradebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|d:\\games\\ninjacity\\assets\\scripts\\ai\\aininja\\ninjasmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ai\\aininja\\ninjasmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|d:\\games\\ninjacity\\assets\\scripts\\general\\resurcesmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\general\\resurcesmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|D:\\Games\\NinjaCity\\assets\\scripts\\general\\save\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\general\\save\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|D:\\Games\\NinjaCity\\assets\\scripts\\build\\buildings\\ninjahouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\build\\buildings\\ninjahouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|d:\\games\\ninjacity\\assets\\scripts\\build\\buildings\\baseaihouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\build\\buildings\\baseaihouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|d:\\games\\ninjacity\\assets\\scripts\\general\\save\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\general\\save\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|d:\\games\\ninjacity\\assets\\scripts\\general\\save\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\general\\save\\gamedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|D:\\Games\\NinjaCity\\assets\\scripts\\levels\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levels\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|d:\\games\\ninjacity\\assets\\scripts\\ai\\aininja\\ninja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ai\\aininja\\ninja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|d:\\games\\ninjacity\\assets\\scripts\\general\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\general\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,47 +42,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameController.cs",
-              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\General\\Save\\GameController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\General\\Save\\GameController.cs",
-              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\General\\Save\\GameController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\General\\Save\\GameController.cs",
-              "ViewState": "AQIAAGIAAAAAAAAAAAAuwG8AAABnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T16:01:15.95Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameData.cs",
-              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\General\\Save\\GameData.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\General\\Save\\GameData.cs",
-              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\General\\Save\\GameData.cs",
-              "RelativeToolTip": "Assets\\Scripts\\General\\Save\\GameData.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAawBgAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T15:49:59.705Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ResurcesManager.cs",
-              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\General\\ResurcesManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\General\\ResurcesManager.cs",
-              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\General\\ResurcesManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\General\\ResurcesManager.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAawDsAAABHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T15:35:05.394Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -85,15 +62,106 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BuildUpgradeButton.cs",
-              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Build\\BuildUpgradeButton.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Build\\BuildUpgradeButton.cs",
-              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Build\\BuildUpgradeButton.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Build\\BuildUpgradeButton.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBQAAAAZAAAA",
+              "DocumentIndex": 6,
+              "Title": "Ninja.cs",
+              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\AI\\AINinja\\Ninja.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AI\\AINinja\\Ninja.cs",
+              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\AI\\AINinja\\Ninja.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AI\\AINinja\\Ninja.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T14:58:31.927Z",
+              "WhenOpened": "2024-07-31T07:36:15.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Health.cs",
+              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\General\\Health.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\General\\Health.cs",
+              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\General\\Health.cs",
+              "RelativeToolTip": "Assets\\Scripts\\General\\Health.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAwCQAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T07:35:27.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NinjasManager.cs",
+              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\AI\\AINinja\\NinjasManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AI\\AINinja\\NinjasManager.cs",
+              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\AI\\AINinja\\NinjasManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AI\\AINinja\\NinjasManager.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAuwBgAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T06:37:35.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BaseAiHouse.cs",
+              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Build\\Buildings\\BaseAiHouse.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Build\\Buildings\\BaseAiHouse.cs",
+              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Build\\Buildings\\BaseAiHouse.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Build\\Buildings\\BaseAiHouse.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAvwCsAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T06:40:02.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameData.cs",
+              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\General\\Save\\GameData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\General\\Save\\GameData.cs",
+              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\General\\Save\\GameData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\General\\Save\\GameData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T15:49:59.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameController.cs",
+              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\General\\Save\\GameController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\General\\Save\\GameController.cs",
+              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\General\\Save\\GameController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\General\\Save\\GameController.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAYwHcAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T16:01:15.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NinjaHouse.cs",
+              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Build\\Buildings\\NinjaHouse.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Build\\Buildings\\NinjaHouse.cs",
+              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Build\\Buildings\\NinjaHouse.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Build\\Buildings\\NinjaHouse.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAgwCAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T06:20:02.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LevelManager.cs",
+              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Levels\\LevelManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Levels\\LevelManager.cs",
+              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Levels\\LevelManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Levels\\LevelManager.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowDsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T06:28:27.356Z",
               "EditorCaption": ""
             }
           ]

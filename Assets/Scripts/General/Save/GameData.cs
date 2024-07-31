@@ -6,7 +6,8 @@ public class GameData
 {
    public List<Building> buildings;
     public List<Resource> resources;
-    public int alliveNinja;
+    public List<Ninjas> ninjas;
+
     public bool isMusicOn;
     public int currentLevel;
     public int currentMap ;
@@ -31,6 +32,12 @@ public class Resource
     public string resourceName;
     public int quantity;
 }
+[Serializable]
+public class Ninjas
+{
+    public int alliveNinja;
+    public string ninjaType;
+}
 public class GameDataManager
 {
     public static void ResetGameData(GameData originalData)
@@ -42,7 +49,7 @@ public class GameDataManager
         };
 
         newData.buildings = new List<Building>(); 
-        newData.alliveNinja = 0; 
+        newData.ninjas = new List<Ninjas>();
         newData.isMusicOn = false; 
         newData.currentLevel = 0;
         GameController.Instance.gameData = newData;

@@ -9,7 +9,6 @@ public class GameController : MonoBehaviour
     private SaveSystem saveSystem;
     public GameData gameData;
     [SerializeField] private bool _startFromBegining;
-    [SerializeField] private BaseAiHouse _houseAI;
     private static bool isStart = true;
     private void Awake()
     {
@@ -91,6 +90,7 @@ public class GameController : MonoBehaviour
             gameData.buildings.Add(building);
         }
         BuildManager.Instance._buildings.Clear();
+        NinjasManager.Instance.SaveNinjasHouse();
         gameData.currentLevel = LevelManager.currentLevel;
     }
     public void ApplyGameData(GameData gameData)
@@ -117,10 +117,7 @@ public class GameController : MonoBehaviour
             }
         }
         BuildManager.Instance._buildings.Clear();
-        if (_houseAI != null)
-        {
-            _houseAI._alliveAICount = gameData.alliveNinja;
-        }       
+        NinjasManager.Instance.LoadNinjasHouse(gameData.ninjas);
         Settings.Instance.isMusicOn = gameData.isMusicOn;
         LevelManager.currentLevel = gameData.currentLevel;
     }

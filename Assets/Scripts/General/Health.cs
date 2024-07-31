@@ -35,7 +35,7 @@ public class Health : MonoBehaviour
             else if (target.TryGetComponent(out Ninja ninja))
             {
                 ninja._ninjaHouse?.AIDie(target);
-                GameController.Instance.gameData.alliveNinja--;
+                GameController.Instance.gameData.ninjas.Find(n => n.ninjaType == ninja.Type).alliveNinja--;
             }
             else if (target.TryGetComponent(out Human human))
             {

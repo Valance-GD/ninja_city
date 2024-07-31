@@ -1,16 +1,23 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
+public class NinjaPrefabs
+{
+    public GameObject ninjaPrefab;
+    public string ninjaType;
+}
 public class LevelManager : BattleManager
 {
-    [SerializeField] private GameObject _ninjaPrefab;
     [SerializeField] private List<LevelSetting> _levels;
+    [SerializeField] private List<NinjaPrefabs> _ninjaPrefabs;
     public BoxCollider boxCollider; 
     public static int currentLevel;
 
     protected override void Start()
     {
-        PlaceObjectInRandomPosition();
+        PlaceNinjasInRandomPosition();
         LoadCurrentLevel();
     }
     public void SwitchToNextLevel()
@@ -23,24 +30,29 @@ public class LevelManager : BattleManager
         _levels[currentLevel].gameObject.SetActive(true);
     }
 
-    private void PlaceObjectInRandomPosition()
+    private void PlaceNinjasInRandomPosition()
     {
-        for (int i = 0; i < GameController.Instance.gameData.alliveNinja; i++)
+        NinjaControl control = FindObjectOfType<NinjaControl>();
+        foreach (Ninjas ninja in GameController.Instance.gameData.ninjas)
         {
-
-            Vector3 randomPoint = GetRandomPointInCollider(boxCollider);
-            GameObject ninja = Instantiate(_ninjaPrefab, randomPoint, Quaternion.identity);
-            FindObjectOfType<NinjaControl>().button.onClick.AddListener(ninja.GetComponent<Ninja>().StartMoveToTarget);
+            NinjaPrefabs currentNinjaType = _ninjaPrefabs.Find(n => n.ninjaType == ninja.ninjaType);
+            for (int i = 0; i < ninja.alliveNinja; i++)
+            {
+                Vector3 randomPoint = GetRandomPointInCollider(boxCollider);
+                GameObject instantNinja = Instantiate(currentNinjaType.ninjaPrefab, randomPoint, Quaternion.identity);
+                control.button.onClick.AddListener(instantNinja.GetComponent<Ninja>().StartMoveToTarget);
+            }
         }
+        
     }
     private Vector3 GetRandomPointInCollider(BoxCollider boxCollider)
     {
         Vector3 min = boxCollider.bounds.min;
         Vector3 max = boxCollider.bounds.max;
 
-        float randomX = Random.Range(min.x, max.x);
-        float randomY = Random.Range(min.y, max.y);
-        float randomZ = Random.Range(min.z, max.z);
+        float randomX = UnityEngine.Random.Range(min.x, max.x);
+        float randomY = UnityEngine.Random.Range(min.y, max.y);
+        float randomZ = UnityEngine.Random.Range(min.z, max.z);
 
         return new Vector3(randomX, randomY, randomZ);
     }

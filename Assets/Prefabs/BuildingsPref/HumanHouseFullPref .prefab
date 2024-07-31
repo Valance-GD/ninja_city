@@ -499,11 +499,6 @@ PrefabInstance:
       objectReference: {fileID: 6678636715812093591}
     - target: {fileID: 733632480560023598, guid: d2b1023e1e7c6ec4fae61bf40bcf4a4a,
         type: 3}
-      propertyPath: _spendEffect
-      value: 
-      objectReference: {fileID: 429920813701509889}
-    - target: {fileID: 733632480560023598, guid: d2b1023e1e7c6ec4fae61bf40bcf4a4a,
-        type: 3}
       propertyPath: _leftAmountText
       value: 
       objectReference: {fileID: 406619789550352980}
@@ -515,6 +510,36 @@ PrefabInstance:
     - target: {fileID: 733632480560023598, guid: d2b1023e1e7c6ec4fae61bf40bcf4a4a,
         type: 3}
       propertyPath: _resoursAmountToBuild
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 733632480560023598, guid: d2b1023e1e7c6ec4fae61bf40bcf4a4a,
+        type: 3}
+      propertyPath: _upgradeData.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 733632480560023598, guid: d2b1023e1e7c6ec4fae61bf40bcf4a4a,
+        type: 3}
+      propertyPath: _upgradeData.Array.data[0]._building
+      value: 
+      objectReference: {fileID: 6678636715812093591}
+    - target: {fileID: 733632480560023598, guid: d2b1023e1e7c6ec4fae61bf40bcf4a4a,
+        type: 3}
+      propertyPath: _upgradeData.Array.data[0].buildResourses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 733632480560023598, guid: d2b1023e1e7c6ec4fae61bf40bcf4a4a,
+        type: 3}
+      propertyPath: _upgradeData.Array.data[0].buildResourses.Array.data[0]._leftAmountText
+      value: 
+      objectReference: {fileID: 406619789550352980}
+    - target: {fileID: 733632480560023598, guid: d2b1023e1e7c6ec4fae61bf40bcf4a4a,
+        type: 3}
+      propertyPath: _upgradeData.Array.data[0].buildResourses.Array.data[0]._resoursTypeToBuild
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 733632480560023598, guid: d2b1023e1e7c6ec4fae61bf40bcf4a4a,
+        type: 3}
+      propertyPath: _upgradeData.Array.data[0].buildResourses.Array.data[0]._resoursAmountToBuild
       value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3876346247206464470, guid: d2b1023e1e7c6ec4fae61bf40bcf4a4a,
@@ -574,11 +599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 6539837943261946810, guid: d2b1023e1e7c6ec4fae61bf40bcf4a4a,
-        type: 3}
-      insertIndex: 0
-      addedObject: {fileID: 6987832969248339575}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b1023e1e7c6ec4fae61bf40bcf4a4a, type: 3}
 --- !u!114 &406619789550352980 stripped
@@ -598,86 +619,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6539837943261946810, guid: d2b1023e1e7c6ec4fae61bf40bcf4a4a,
     type: 3}
   m_PrefabInstance: {fileID: 1396448590878483435}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1936292430381121545
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 5306090753944436817}
-    m_Modifications:
-    - target: {fileID: 2245173087573947144, guid: d73f0a1c91bf91d4a8997ef50dba1b37,
-        type: 3}
-      propertyPath: m_Name
-      value: WoodSpendEffect 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8801954223012607614, guid: d73f0a1c91bf91d4a8997ef50dba1b37,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8801954223012607614, guid: d73f0a1c91bf91d4a8997ef50dba1b37,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8801954223012607614, guid: d73f0a1c91bf91d4a8997ef50dba1b37,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8801954223012607614, guid: d73f0a1c91bf91d4a8997ef50dba1b37,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8801954223012607614, guid: d73f0a1c91bf91d4a8997ef50dba1b37,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8801954223012607614, guid: d73f0a1c91bf91d4a8997ef50dba1b37,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8801954223012607614, guid: d73f0a1c91bf91d4a8997ef50dba1b37,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8801954223012607614, guid: d73f0a1c91bf91d4a8997ef50dba1b37,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8801954223012607614, guid: d73f0a1c91bf91d4a8997ef50dba1b37,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8801954223012607614, guid: d73f0a1c91bf91d4a8997ef50dba1b37,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d73f0a1c91bf91d4a8997ef50dba1b37, type: 3}
---- !u!1 &429920813701509889 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2245173087573947144, guid: d73f0a1c91bf91d4a8997ef50dba1b37,
-    type: 3}
-  m_PrefabInstance: {fileID: 1936292430381121545}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &6987832969248339575 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8801954223012607614, guid: d73f0a1c91bf91d4a8997ef50dba1b37,
-    type: 3}
-  m_PrefabInstance: {fileID: 1936292430381121545}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3356108726778183604
 PrefabInstance:

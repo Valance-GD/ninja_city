@@ -41,6 +41,7 @@ public abstract class BaseAiHouse : MonoBehaviour
                 RespawnProcess();
         }
         respawnCoroutine = null;
+        NinjasManager.Instance.SaveNinjasHouse();
         StopAllCoroutines();
     }
     protected virtual void RespawnProcess()
@@ -51,8 +52,8 @@ public abstract class BaseAiHouse : MonoBehaviour
     {
         for (int i = 0; i < _alliveAICount; i++)
         {
-
             RespawnProcess();
-        } 
+        }
+        NinjasManager.Instance.SaveNinjasHouse();
     }
 }
