@@ -90,6 +90,7 @@ public class GameController : MonoBehaviour
             gameData.buildings.Add(building);
         }
         BuildManager.Instance._buildings.Clear();
+        gameData.currentRade = RadeManager.currentRade;
         NinjasManager.Instance.SaveNinjasHouse();
         gameData.currentLevel = LevelManager.currentLevel;
     }
@@ -119,6 +120,7 @@ public class GameController : MonoBehaviour
         BuildManager.Instance._buildings.Clear();
         NinjasManager.Instance.LoadNinjasHouse(gameData.ninjas);
         Settings.Instance.isMusicOn = gameData.isMusicOn;
+        RadeManager.currentRade = gameData.currentRade;
         LevelManager.currentLevel = gameData.currentLevel;
     }
 }

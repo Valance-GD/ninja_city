@@ -10,6 +10,7 @@ public class GameData
 
     public bool isMusicOn;
     public int currentLevel;
+    public int currentRade;
     public int currentMap ;
     public GameData()
     {
@@ -52,6 +53,7 @@ public class GameDataManager
         newData.ninjas = new List<Ninjas>();
         newData.isMusicOn = false; 
         newData.currentLevel = 0;
+        newData.currentRade = 0;
         GameController.Instance.gameData = newData;
         GameController.Instance.SaveNewData();
         
