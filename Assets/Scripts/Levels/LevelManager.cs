@@ -40,7 +40,7 @@ public class LevelManager : BattleManager
             {
                 Vector3 randomPoint = GetRandomPointInCollider(boxCollider);
                 GameObject instantNinja = Instantiate(currentNinjaType.ninjaPrefab, randomPoint, Quaternion.identity);
-                control.button.onClick.AddListener(instantNinja.GetComponent<Ninja>().StartMoveToTarget);
+                control.Ninjas.Add(instantNinja);
             }
         }
         

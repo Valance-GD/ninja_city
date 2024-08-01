@@ -140,6 +140,7 @@
     <Compile Include="Assets\Scripts\General\Settings.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\Scripts\Build\RespawnAI.cs" />
+    <Compile Include="Assets\Scripts\Build\Buildings\AI\HomePoint.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Scripts\Resourses\CutTree.cs" />
   </ItemGroup>

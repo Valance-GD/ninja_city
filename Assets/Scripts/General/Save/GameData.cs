@@ -16,6 +16,7 @@ public class GameData
     {
         buildings = new List<Building>();
         resources = new List<Resource>();
+        ninjas = new List<Ninjas>();
     }
 }
 

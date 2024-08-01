@@ -19,7 +19,6 @@ public class NinjasManager : MonoBehaviour
         else
         {
             Debug.LogError("oneMoreNinjasManager");
-            //Destroy(gameObject);
         }
     }
     public void SaveNinjasHouse()

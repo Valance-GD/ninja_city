@@ -10,10 +10,11 @@ public abstract class BaseAiHouse : MonoBehaviour
     [SerializeField] protected GameObject _AIPrefab;
     [SerializeField] protected Transform _respawnPoint;
     [SerializeField] protected int _foodForRespawn;
+
     protected List<GameObject> _allaviAIList;
     public int _alliveAICount;
     protected Coroutine respawnCoroutine;
-    private void Start()
+    protected virtual void Start()
     {
         _allaviAIList = new List<GameObject>();
         RespawnInStart();
@@ -25,7 +26,7 @@ public abstract class BaseAiHouse : MonoBehaviour
         if (target != null)
         {
             _allaviAIList.Remove(target);
-
+            _alliveAICount--;
         }
         if (respawnCoroutine == null)
         {
@@ -37,9 +38,12 @@ public abstract class BaseAiHouse : MonoBehaviour
     {
         while (_allaviAIList.Count < _alliveAICountMax && ResurcesManager.Instance.SpendResource("Food", _foodForRespawn))
         {
-                yield return new WaitForSeconds(_secondToSpawn);
-                RespawnProcess();
+            yield return new WaitForSeconds(_secondToSpawn);
+            _alliveAICount++;
+            RespawnProcess();
+            
         }
+
         respawnCoroutine = null;
         NinjasManager.Instance.SaveNinjasHouse();
         StopAllCoroutines();
