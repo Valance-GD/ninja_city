@@ -24,7 +24,7 @@ public class BuildUpgradeButton : MonoBehaviour
     private int _currentBuildingLevel = 0;
     private int _resoursAmountDef;
     private List<bool> _payedInfo;
-    
+    private List<GameObject> _effects = new List<GameObject>();
     private void Start()
     {
         if (_upgradeData.Count > 0)
@@ -55,6 +55,11 @@ public class BuildUpgradeButton : MonoBehaviour
         if (other.TryGetComponent(out PlayerController player))
         {
             StopAllCoroutines();
+            foreach (GameObject effect in _effects)
+            {
+                Destroy(effect);
+            }
+            _effects.Clear();
         }
     }
     private void CheckForBuild()
@@ -80,6 +85,9 @@ public class BuildUpgradeButton : MonoBehaviour
     private IEnumerator SpendResWithDelay(ResourseForBuild res)
     {
         _resoursAmountDef = res._resoursAmountToBuild;
+        GameObject effectPrefab = ResurcesManager.Instance.UseCurrentEffect(res._resoursTypeToBuild);
+        GameObject currentEffect = Instantiate(effectPrefab, transform);
+        _effects.Add(currentEffect);
         for (int i = 0; i < _resoursAmountDef; i++)
         {
             if (ResurcesManager.Instance.SpendResource(res._resoursTypeToBuild, 1))
@@ -89,12 +97,16 @@ public class BuildUpgradeButton : MonoBehaviour
                 res._leftAmountText.text = res._resoursAmountToBuild.ToString();
                 if (res._resoursAmountToBuild == 0)
                 {
+                    _effects.Remove(currentEffect);
+                    Destroy(currentEffect);
                     CheckForBuild();
                     break;
                 }
             }
             else
             {
+                _effects.Remove(currentEffect);
+                Destroy(currentEffect);
                 break;
             }
             yield return new WaitForFixedUpdate();

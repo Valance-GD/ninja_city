@@ -1,17 +1,16 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private Slider _healthImage;   
+    [SerializeField] private Slider _healthImage;
     [SerializeField] private float _health;
     [SerializeField] private float _healingSpeed = 5f;
     private Transform _cameraTransform;
     private float _maxHealth;
-   
+
     private void Start()
     {
         UpdateUIHealth();
@@ -61,8 +60,7 @@ public class Health : MonoBehaviour
     }
     private void UpdateUIHealth()
     {
-        _healthImage.value = _health / 100;
-        
+        _healthImage.value = _health / _maxHealth;
     }
     private void Update()
     {

@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "D:\\Games\\NinjaCity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|D:\\Games\\NinjaCity\\assets\\scripts\\build\\buildings\\protect\\baseprotecthouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\build\\buildings\\protect\\baseprotecthouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|d:\\games\\ninjacity\\assets\\scripts\\build\\buildings\\protect\\sniperhouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\build\\buildings\\protect\\sniperhouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|d:\\games\\ninjacity\\assets\\scripts\\build\\buildings\\protect\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|D:\\Games\\NinjaCity\\assets\\scripts\\build\\buildings\\protect\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\build\\buildings\\protect\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|d:\\games\\ninjacity\\assets\\scripts\\build\\buildupgradebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\build\\buildupgradebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|d:\\games\\ninjacity\\assets\\scripts\\general\\resurcesmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E397197-84B4-2A12-F56F-27C9B624A2E4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\general\\resurcesmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,28 +46,54 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BuildUpgradeButton.cs",
+              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Build\\BuildUpgradeButton.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Build\\BuildUpgradeButton.cs",
+              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Build\\BuildUpgradeButton.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Build\\BuildUpgradeButton.cs",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAjwFgAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T07:20:29.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ResurcesManager.cs",
+              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\General\\ResurcesManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\General\\ResurcesManager.cs",
+              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\General\\ResurcesManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\General\\ResurcesManager.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwCkAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T07:09:32.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SniperHouse.cs",
+              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Build\\Buildings\\Protect\\SniperHouse.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Build\\Buildings\\Protect\\SniperHouse.cs",
+              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Build\\Buildings\\Protect\\SniperHouse.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Build\\Buildings\\Protect\\SniperHouse.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBYAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T07:49:49.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Projectile.cs",
               "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Build\\Buildings\\Protect\\Projectile.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Build\\Buildings\\Protect\\Projectile.cs",
               "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Build\\Buildings\\Protect\\Projectile.cs",
               "RelativeToolTip": "Assets\\Scripts\\Build\\Buildings\\Protect\\Projectile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-31T13:47:04.354Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BaseProtectHouse.cs",
-              "DocumentMoniker": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Build\\Buildings\\Protect\\BaseProtectHouse.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Build\\Buildings\\Protect\\BaseProtectHouse.cs",
-              "ToolTip": "D:\\Games\\NinjaCity\\Assets\\Scripts\\Build\\Buildings\\Protect\\BaseProtectHouse.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Build\\Buildings\\Protect\\BaseProtectHouse.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAowDgAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T12:40:57.47Z",
               "EditorCaption": ""
             }
           ]

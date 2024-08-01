@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,10 +11,13 @@ public class ResurcesManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _moneyText;
     [SerializeField] private TextMeshProUGUI _woodText;
     [SerializeField] private TextMeshProUGUI _foodText;
+    [SerializeField] private GameObject _moneySpendEffect;
+    [SerializeField] private GameObject _woodSpendEffect;
 
     public Dictionary<string, int> _resources = new Dictionary<string, int>();
     private Dictionary<string, TextMeshProUGUI> _resourceTexts = new Dictionary<string, TextMeshProUGUI>();
-
+    private Dictionary<string, GameObject> _resourceEffects = new Dictionary<string, GameObject>();
+    
     private void Awake()
     {
         if (Instance == null)
@@ -33,12 +37,18 @@ public class ResurcesManager : MonoBehaviour
         InitializeResource();
         UpdateAllResourcesUI();
     }
-
+    public GameObject UseCurrentEffect(string effectName)
+    {
+        return _resourceEffects[effectName].gameObject;
+    }
     private void InitializeResource()
     {
         _resourceTexts["Money"] = _moneyText;
         _resourceTexts["Wood"] = _woodText;
         _resourceTexts["Food"] = _foodText;
+        _resourceEffects["Money"] = _moneySpendEffect;
+        _resourceEffects["Wood"] = _woodSpendEffect;
+
     }
 
     public void AddResource(string resourceName, int amount)

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BaseProtectHouse : MonoBehaviour
+public class SniperHouse : MonoBehaviour
 {
     [SerializeField] private float detectionRadius = 5f;
     [SerializeField] private float fireRate = 1f;

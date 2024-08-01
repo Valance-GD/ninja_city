@@ -123,7 +123,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 939b8fb17f8d95f4a89e5d7020e1a14c, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: e2e296f98fec4d94ea2dde015839df74, type: 2}
 --- !u!1001 &9474277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -779,6 +779,10 @@ MonoBehaviour:
   _moneyText: {fileID: 1397628499}
   _woodText: {fileID: 1453343424}
   _foodText: {fileID: 733829788}
+  _moneySpendEffect: {fileID: 2245173087573947144, guid: b770e5fa8a9b0754ea4e4d034c08c7c6,
+    type: 3}
+  _woodSpendEffect: {fileID: 2245173087573947144, guid: d73f0a1c91bf91d4a8997ef50dba1b37,
+    type: 3}
 --- !u!1 &315356724
 GameObject:
   m_ObjectHideFlags: 0
@@ -2182,6 +2186,90 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1116320814}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &942357788
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 954909749}
+    m_Modifications:
+    - target: {fileID: 1773443894652213548, guid: 5dfc8ea577710c64e867570ea0fb7039,
+        type: 3}
+      propertyPath: _upgradeData.Array.data[0].buildResourses.Array.data[1]._resoursTypeToBuild
+      value: Money
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364193960945059042, guid: 5dfc8ea577710c64e867570ea0fb7039,
+        type: 3}
+      propertyPath: fireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104272319549883507, guid: 5dfc8ea577710c64e867570ea0fb7039,
+        type: 3}
+      propertyPath: m_Name
+      value: TowerFullPref  (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676298984740364761, guid: 5dfc8ea577710c64e867570ea0fb7039,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.444286
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676298984740364761, guid: 5dfc8ea577710c64e867570ea0fb7039,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.733645
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676298984740364761, guid: 5dfc8ea577710c64e867570ea0fb7039,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.00315
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676298984740364761, guid: 5dfc8ea577710c64e867570ea0fb7039,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676298984740364761, guid: 5dfc8ea577710c64e867570ea0fb7039,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676298984740364761, guid: 5dfc8ea577710c64e867570ea0fb7039,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676298984740364761, guid: 5dfc8ea577710c64e867570ea0fb7039,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676298984740364761, guid: 5dfc8ea577710c64e867570ea0fb7039,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676298984740364761, guid: 5dfc8ea577710c64e867570ea0fb7039,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676298984740364761, guid: 5dfc8ea577710c64e867570ea0fb7039,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5dfc8ea577710c64e867570ea0fb7039, type: 3}
+--- !u!4 &942357789 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5676298984740364761, guid: 5dfc8ea577710c64e867570ea0fb7039,
+    type: 3}
+  m_PrefabInstance: {fileID: 942357788}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &954909748
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,6 +2308,7 @@ Transform:
   - {fileID: 356245297}
   - {fileID: 1946435051}
   - {fileID: 8228173289585531388}
+  - {fileID: 942357789}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
@@ -2622,6 +2711,31 @@ PrefabInstance:
       propertyPath: button
       value: 
       objectReference: {fileID: 1665165545}
+    - target: {fileID: 6481820006859827892, guid: f4ac2471daec07d418967f193a0328e0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7129787797187886361, guid: f4ac2471daec07d418967f193a0328e0,
+        type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887046166765684054, guid: f4ac2471daec07d418967f193a0328e0,
+        type: 3}
+      propertyPath: _health
+      value: 325
+      objectReference: {fileID: 0}
+    - target: {fileID: 8248515214851423715, guid: f4ac2471daec07d418967f193a0328e0,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8248515214851423715, guid: f4ac2471daec07d418967f193a0328e0,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5016,6 +5130,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 954909749}
     m_Modifications:
+    - target: {fileID: 1773443894652213548, guid: 5dfc8ea577710c64e867570ea0fb7039,
+        type: 3}
+      propertyPath: _upgradeData.Array.data[0].buildResourses.Array.data[1]._resoursTypeToBuild
+      value: Money
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364193960945059042, guid: 5dfc8ea577710c64e867570ea0fb7039,
+        type: 3}
+      propertyPath: fireRate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5104272319549883507, guid: 5dfc8ea577710c64e867570ea0fb7039,
         type: 3}
       propertyPath: m_Name
