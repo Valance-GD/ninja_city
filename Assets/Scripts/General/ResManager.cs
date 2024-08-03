@@ -1,12 +1,9 @@
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
-public class ResurcesManager : MonoBehaviour
+public class ResManager : MonoBehaviour
 {
-    public static ResurcesManager Instance { get; private set; }
+    public static ResManager Instance { get; private set; }
 
     [SerializeField] private TextMeshProUGUI _moneyText;
     [SerializeField] private TextMeshProUGUI _woodText;
@@ -26,14 +23,13 @@ public class ResurcesManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("more than one ResourseManager");
+            Debug.LogError("more than one ResManager");
             Destroy(gameObject);
         }
        
     }
     private void Start()
     {
-        
         InitializeResource();
         UpdateAllResourcesUI();
     }
@@ -67,7 +63,6 @@ public class ResurcesManager : MonoBehaviour
 
     public bool SpendResource(string resourceName, int amount)
     {
-        // добавити сюди спавн відповідного ефетку за назвою в словнику
         if (_resources.ContainsKey(resourceName))
         {
             if (_resources[resourceName] >= amount)

@@ -49,7 +49,7 @@ public abstract class BattleManager : MonoBehaviour
             if (_enemysOnLevel.Count == 0)
             {
                 _endBattleUI.SetActive(true);
-                ResurcesManager.Instance.AddResource("Money", _winMoney);
+                ResManager.Instance.AddResource("Money", _winMoney);
             }
         }
     }

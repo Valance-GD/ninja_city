@@ -85,12 +85,12 @@ public class BuildUpgradeButton : MonoBehaviour
     private IEnumerator SpendResWithDelay(ResourseForBuild res)
     {
         _resoursAmountDef = res._resoursAmountToBuild;
-        GameObject effectPrefab = ResurcesManager.Instance.UseCurrentEffect(res._resoursTypeToBuild);
+        GameObject effectPrefab = ResManager.Instance.UseCurrentEffect(res._resoursTypeToBuild);
         GameObject currentEffect = Instantiate(effectPrefab, transform);
         _effects.Add(currentEffect);
         for (int i = 0; i < _resoursAmountDef; i++)
         {
-            if (ResurcesManager.Instance.SpendResource(res._resoursTypeToBuild, 1))
+            if (ResManager.Instance.SpendResource(res._resoursTypeToBuild, 1))
             {
                 res._resoursAmountToBuild--;
                 

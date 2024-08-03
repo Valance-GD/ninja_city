@@ -76,7 +76,7 @@ public class GameController : MonoBehaviour
 
     private void SaveGameData()
     {
-        foreach (var resource in ResurcesManager.Instance._resources)
+        foreach (var resource in ResManager.Instance._resources)
         {
             var existingResource = gameData.resources.FirstOrDefault(r => r.resourceName == resource.Key);
 
@@ -89,21 +89,23 @@ public class GameController : MonoBehaviour
         {
             gameData.buildings.Add(building);
         }
+
         BuildManager.Instance._buildings.Clear();
         gameData.currentRade = RadeManager.currentRade;
         NinjasManager.Instance.SaveNinjasHouse();
+        PlayerStats.Instance.SavePlayerStats();
         gameData.currentLevel = LevelManager.currentLevel;
     }
     public void ApplyGameData(GameData gameData)
     {
         // Очищаємо існуючий словник
-        ResurcesManager.Instance._resources.Clear();
+        ResManager.Instance._resources.Clear();
 
         // Ітеруємося по ресурсах у gameData і оновлюємо словник
         foreach (var resource in gameData.resources)
         {
-            ResurcesManager.Instance._resources[resource.resourceName] = resource.quantity;
-            ResurcesManager.Instance.UpdateUI(resource.resourceName);
+            ResManager.Instance._resources[resource.resourceName] = resource.quantity;
+            ResManager.Instance.UpdateUI(resource.resourceName);
         }
         foreach (Building building in gameData.buildings)
         {
@@ -117,6 +119,7 @@ public class GameController : MonoBehaviour
                 Debug.LogWarning("Building not found: " + building.buildingName);
             }
         }
+        PlayerStats.Instance.LoadPlayerStats();
         BuildManager.Instance._buildings.Clear();
         NinjasManager.Instance.LoadNinjasHouse(gameData.ninjas);
         Settings.Instance.isMusicOn = gameData.isMusicOn;

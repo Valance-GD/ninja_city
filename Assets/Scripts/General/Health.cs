@@ -10,7 +10,9 @@ public class Health : MonoBehaviour
     [SerializeField] private float _healingSpeed = 5f;
     private Transform _cameraTransform;
     private float _maxHealth;
+    public float MaxHealth => _maxHealth;
 
+    
     private void Start()
     {
         UpdateUIHealth();
@@ -50,6 +52,11 @@ public class Health : MonoBehaviour
         UpdateUIHealth();
         StartCoroutine(Healing());
         return _health;
+    }
+    public void AddHealth(float health)
+    {
+        _maxHealth += health;
+        _health = _maxHealth;
     }
     private IEnumerator Healing()
     {

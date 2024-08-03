@@ -19,7 +19,7 @@ public class CutTree : MonoBehaviour
     private IEnumerator DeletingProcces()
     {
         yield return new WaitForSeconds(deleatingTime);
-        ResurcesManager.Instance.AddResource("Wood", _woodAmount);
+        ResManager.Instance.AddResource("Wood", _woodAmount);
         StopAllCoroutines();
         Destroy(gameObject);
     }

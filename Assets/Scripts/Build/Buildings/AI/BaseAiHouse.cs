@@ -36,7 +36,7 @@ public abstract class BaseAiHouse : MonoBehaviour
     }
     private IEnumerator RespawnHuman()
     {
-        while (_allaviAIList.Count < _alliveAICountMax && ResurcesManager.Instance.SpendResource("Food", _foodForRespawn))
+        while (_allaviAIList.Count < _alliveAICountMax && ResManager.Instance.SpendResource("Food", _foodForRespawn))
         {
             yield return new WaitForSeconds(_secondToSpawn);
             _alliveAICount++;

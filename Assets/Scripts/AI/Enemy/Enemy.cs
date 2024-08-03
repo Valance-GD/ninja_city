@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent), typeof(Health))]
@@ -13,7 +12,8 @@ public class Enemy : BaseAi
     {
         if (other.TryGetComponent(out Instrument sword))
         {
-            _gameObjectNavMesh.GetComponent<Health>().TakeDamage(sword.Damage, gameObject, _addResurseAmount);
+            _gameObjectNavMesh.GetComponent<Health>().TakeDamage
+                (sword.Damage+ _player.GetComponent<PlayerInteract>().Damage, gameObject, _addResurseAmount);
         }
     }
     private void Update()

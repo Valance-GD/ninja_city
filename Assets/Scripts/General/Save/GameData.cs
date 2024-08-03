@@ -10,6 +10,8 @@ public class GameData
 
     public bool isMusicOn;
     public int currentLevel;
+    public int playerHP = 50;
+    public int playerDamage;
     public int currentRade;
     public int currentMap ;
     public GameData()
