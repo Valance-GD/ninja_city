@@ -8,7 +8,10 @@ public abstract class BattleManager : MonoBehaviour
     public static BattleManager Instance { get; private set; }
     protected List<GameObject> _enemysOnLevel;
     [SerializeField] protected int _winMoney;
-    [SerializeField] protected GameObject _endBattleUI;    
+    [SerializeField] protected GameObject _endBattleUI;
+    [SerializeField] protected LevelDoor _door;
+    protected bool _isLevelEnds = false;
+    protected bool _isRadeEnds = false;
     private void Awake()
     {
         if (Instance == null)
@@ -21,9 +24,19 @@ public abstract class BattleManager : MonoBehaviour
 
     protected virtual void Start()
     {
-        
+        CheckIsEndMap();
     }
-    
+    public void CheckIsEndMap()
+    {
+        if (_isLevelEnds&& _isRadeEnds)
+        {
+            _door.EnemyEnd();
+        }
+    }
+    public void LevelEnd()
+    {
+        _isLevelEnds=true;
+    }
     public void AddEnemy(GameObject enemy)
     {
         _enemysOnLevel.Add(enemy);

@@ -11,13 +11,18 @@ public class MapLevelUI : MonoBehaviour
 
     private void Start()
     {
+        if (LevelManager.currentLevel > _levelsInMap.Count - 1)
+        {
+            BattleManager.Instance.LevelEnd();
+            BattleManager.Instance.CheckIsEndMap();
+        }
         OpenCurrentLevel();
+        
     }
     private void OpenCurrentLevel()
     {
         if (LevelManager.currentLevel > _levelsInMap.Count - 1)
         {
-            _door.LevelEnds();
             return;
         }
         _levelsInMap[LevelManager.currentLevel].enabled = true;

@@ -26,19 +26,25 @@ public class RadeManager : BattleManager
 
     protected override void Start()
     {
+        if (currentRade > _radeWaves.Count - 1)
+        {
+            _isRadeEnds = true;
+            CheckIsEndMap();
+        }
         base.Start();
         _followButton.GetComponent<Button>().onClick.AddListener(DefUI);
     }
     public void LoadRade()
     {
+        if (currentRade > _radeWaves.Count - 1)
+        {
+            return;
+        }
         _stayHomeButton.SetActive(false);
         _followButton.SetActive(true);
         _followButton.GetComponent<Button>().onClick.RemoveListener(DefUI);
         _followButton.GetComponent<Button>().onClick.AddListener(AttackUI);
-        if (currentRade > _radeWaves.Count - 1)
-        {
-            currentRade = _radeWaves.Count - 1;
-        }
+        
         foreach (RadeWaveEnemys enemy in _radeWaves[currentRade]._enemysInWave)
         {
             for (int i = 0; i < enemy._countEnemy; i++)
@@ -66,6 +72,11 @@ public class RadeManager : BattleManager
         _followButton.GetComponent<Button>().onClick.RemoveListener(AttackUI);
         _followButton.GetComponent<Button>().onClick.AddListener(DefUI);
         currentRade++;
+        if (currentRade > _radeWaves.Count - 1)
+        {
+            _isRadeEnds = true;
+            CheckIsEndMap();
+        }
         GameController.Instance.Save();
     }
 }

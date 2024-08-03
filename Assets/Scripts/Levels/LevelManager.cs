@@ -23,6 +23,11 @@ public class LevelManager : BattleManager
     public void SwitchToNextLevel()
     {
         currentLevel++;
+        if (currentLevel > _levels.Count - 1)
+        {
+            _isLevelEnds = true;
+            CheckIsEndMap();
+        }
         GameController.Instance.Save();
     }
     private void LoadCurrentLevel()
