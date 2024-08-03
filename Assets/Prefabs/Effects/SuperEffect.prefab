@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 96507217115574273}
   - component: {fileID: 3296792756333038338}
   m_Layer: 0
-  m_Name: CutTreeEffect
+  m_Name: SuperEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

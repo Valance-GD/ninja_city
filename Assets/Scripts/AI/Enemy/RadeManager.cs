@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [Serializable]
 public class RadeWaveEnemys
@@ -16,12 +17,24 @@ public class EnemysInRade
 public class RadeManager : BattleManager
 {
     [SerializeField] private List<EnemysInRade> _radeWaves;
+    [SerializeField] private GameObject _attackButton;
+    [SerializeField] private GameObject _followButton;
+    [SerializeField] private GameObject _stayHomeButton;
     public Transform enemySpawnPoint;
+    
     public static int currentRade = 0;
 
-
+    protected override void Start()
+    {
+        base.Start();
+        _followButton.GetComponent<Button>().onClick.AddListener(DefUI);
+    }
     public void LoadRade()
     {
+        _stayHomeButton.SetActive(false);
+        _followButton.SetActive(true);
+        _followButton.GetComponent<Button>().onClick.RemoveListener(DefUI);
+        _followButton.GetComponent<Button>().onClick.AddListener(AttackUI);
         if (currentRade > _radeWaves.Count - 1)
         {
             currentRade = _radeWaves.Count - 1;
@@ -35,8 +48,23 @@ public class RadeManager : BattleManager
             }
         }
     }
+    private void AttackUI()
+    {
+        _followButton.SetActive(false);
+        _attackButton.SetActive(true);
+    }
+    private void DefUI()
+    {
+        _followButton.SetActive(false);
+        _stayHomeButton.SetActive(true);
+    }
+    
     public void SwitchToNextRade()
     {
+        _attackButton.SetActive(false);
+        _followButton.SetActive(true);
+        _followButton.GetComponent<Button>().onClick.RemoveListener(AttackUI);
+        _followButton.GetComponent<Button>().onClick.AddListener(DefUI);
         currentRade++;
         GameController.Instance.Save();
     }

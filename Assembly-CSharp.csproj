@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\General\SoundManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Scripts\Build\Buildings\AI\NinjaHouse.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerSuper.cs" />
     <Compile Include="Assets\Scripts\AI\Human.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Scripts\Build\BuildUpgradeButton.cs" />

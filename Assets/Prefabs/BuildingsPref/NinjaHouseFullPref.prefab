@@ -135,7 +135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &76260930209780659
 Transform:
   m_ObjectHideFlags: 0
@@ -180,9 +180,9 @@ MonoBehaviour:
   _alliveAICount: 3
   _ninjaType: Def
   _ninjasHomePoints:
-  - {fileID: 2731489405904130179}
-  - {fileID: 4812232648730787915}
-  - {fileID: 4593906063626107410}
+  - {fileID: 7922249785455600865}
+  - {fileID: 5667880878276094342}
+  - {fileID: 7824692306539437229}
 --- !u!1 &2453874557003273213
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,6 +192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2731489405904130179}
+  - component: {fileID: 7922249785455600865}
   m_Layer: 0
   m_Name: _homePoint
   m_TagString: Untagged
@@ -214,6 +215,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 76260930209780659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7922249785455600865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2453874557003273213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984f8877efeac3f46a773025bc00d059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ninja: {fileID: 0}
+  _isfree: 1
 --- !u!1 &3050490293656799439
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +302,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4812232648730787915}
+  - component: {fileID: 5667880878276094342}
   m_Layer: 0
   m_Name: _homePoint (1)
   m_TagString: Untagged
@@ -309,6 +325,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 76260930209780659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5667880878276094342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5739674547034856165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984f8877efeac3f46a773025bc00d059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ninja: {fileID: 0}
+  _isfree: 1
 --- !u!1 &8083372590945095257
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +348,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4593906063626107410}
+  - component: {fileID: 7824692306539437229}
   m_Layer: 0
   m_Name: _homePoint (2)
   m_TagString: Untagged
@@ -340,6 +371,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 76260930209780659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7824692306539437229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8083372590945095257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984f8877efeac3f46a773025bc00d059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ninja: {fileID: 0}
+  _isfree: 1
 --- !u!1001 &6919326766744099399
 PrefabInstance:
   m_ObjectHideFlags: 0
