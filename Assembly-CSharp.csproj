@@ -139,7 +139,9 @@
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\Levels\LevelWaveTrigger.cs" />
+    <Compile Include="Assets\Scripts\Instrument\SwordManager.cs" />
     <Compile Include="Assets\Scripts\Build\Buildings\Protect\SniperHouse.cs" />
+    <Compile Include="Assets\Scripts\Instrument\BuySword.cs" />
     <Compile Include="Assets\Scripts\General\Settings.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\Scripts\Build\RespawnAI.cs" />

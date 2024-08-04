@@ -12,13 +12,18 @@ public class PlayerInteract : MonoBehaviour
 
     [Header("Attack")]
     [SerializeField] private Animator _animator;
-    [SerializeField]private int _damage= 0;
-    [SerializeField]  private GameObject _sword;
+    [SerializeField] private int _damage= 0;
+    private GameObject _sword;
+
     public int Damage => _damage;
 
     private void Update()
     {
         CheckOverlap();
+    }
+    public void GetCurrentSword(GameObject sword)
+    {
+        _sword = sword;
     }
     public void AddDamage(int damage)
     {

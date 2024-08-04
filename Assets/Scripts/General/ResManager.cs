@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 public class ResManager : MonoBehaviour
@@ -14,7 +15,16 @@ public class ResManager : MonoBehaviour
     public Dictionary<string, int> _resources = new Dictionary<string, int>();
     private Dictionary<string, TextMeshProUGUI> _resourceTexts = new Dictionary<string, TextMeshProUGUI>();
     private Dictionary<string, GameObject> _resourceEffects = new Dictionary<string, GameObject>();
-    
+    private void Update() // delate
+    {
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            foreach(string res in _resources.Keys.ToList())
+            {
+                AddResource(res, 100);
+            }
+        }
+    }
     private void Awake()
     {
         if (Instance == null)

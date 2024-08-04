@@ -29,7 +29,7 @@ public class GameController : MonoBehaviour
        
         saveSystem = GetComponent<SaveSystem>();
         gameData = saveSystem.LoadGame();
-
+        
         if (gameData == null || _startFromBegining)
         {
             gameData = new GameData();
@@ -41,9 +41,7 @@ public class GameController : MonoBehaviour
             SceneManager.LoadScene(gameData.currentMap);
             isStart = false;
         }
-        // Завантажте дані у відповідні елементи гри, якщо потрібно
         ApplyGameData(gameData);
-        
     }
 
     private void OnApplicationQuit()
@@ -72,6 +70,7 @@ public class GameController : MonoBehaviour
         gameData.resources.Add(new Resource { resourceName = "Money", quantity = 0 });
         gameData.resources.Add(new Resource { resourceName = "Wood", quantity = 0 });
         gameData.resources.Add(new Resource { resourceName = "Food", quantity = 0 });
+        gameData.broughtSwords.Add(0);
     }
 
     private void SaveGameData()
@@ -94,6 +93,7 @@ public class GameController : MonoBehaviour
         gameData.currentRade = RadeManager.currentRade;
         NinjasManager.Instance.SaveNinjasHouse();
         PlayerStats.Instance.SavePlayerStats();
+        
         gameData.currentLevel = LevelManager.currentLevel;
     }
     public void ApplyGameData(GameData gameData)
@@ -119,11 +119,13 @@ public class GameController : MonoBehaviour
                 Debug.LogWarning("Building not found: " + building.buildingName);
             }
         }
+
         PlayerStats.Instance.LoadPlayerStats();
         BuildManager.Instance._buildings.Clear();
         NinjasManager.Instance.LoadNinjasHouse(gameData.ninjas);
         Settings.Instance.isMusicOn = gameData.isMusicOn;
         RadeManager.currentRade = gameData.currentRade;
         LevelManager.currentLevel = gameData.currentLevel;
+        SwordManager.Instance.LoadSwords(gameData);
     }
 }

@@ -15,7 +15,6 @@ public class Health : MonoBehaviour
     
     private void Start()
     {
-        UpdateUIHealth();
         _maxHealth = _health;
         _cameraTransform = Camera.main.transform;
     }

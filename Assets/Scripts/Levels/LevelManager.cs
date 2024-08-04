@@ -17,6 +17,7 @@ public class LevelManager : BattleManager
 
     protected override void Start()
     {
+        GameController.Instance.Load();
         PlaceNinjasInRandomPosition();
         LoadCurrentLevel();
     }

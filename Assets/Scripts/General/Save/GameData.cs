@@ -13,6 +13,8 @@ public class GameData
     public int playerHP = 50;
     public int playerDamage;
     public int currentRade;
+    public int currentSword;
+    public List<int> broughtSwords = new List<int>();
     public int currentMap ;
     public GameData()
     {
