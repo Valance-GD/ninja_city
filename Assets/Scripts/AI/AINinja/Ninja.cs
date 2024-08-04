@@ -10,15 +10,17 @@ public class Ninja : BaseAi
     public NinjaHouse _ninjaHouse;
     private bool isAttack;
     [SerializeField] private string _type;
+    private float _stopingDistanse;
     public NinjaControl _ninjaControl;
     public Transform _homePoint;
     public string Type => _type;
     protected override void Start()
     {
         base.Start();
+        _stopingDistanse = _gameObjectNavMesh.stoppingDistance;
         if (_ninjaControl == null)
         {
-            _ninjaControl = _ninjaControl = FindObjectOfType<NinjaControl>();
+            _ninjaControl = FindObjectOfType<NinjaControl>();
         }
         SetState(_ninjaControl.State);
     }
@@ -40,7 +42,7 @@ public class Ninja : BaseAi
     public void StartAttack()
     {
         StopAllCoroutines();
-        _gameObjectNavMesh.stoppingDistance = 2f;
+        _gameObjectNavMesh.stoppingDistance = _stopingDistanse;
         _gameObjectNavMesh.speed = 5f;
         isAttack = true;
     }
@@ -50,7 +52,7 @@ public class Ninja : BaseAi
         isAttack = false;
         _animator.SetBool("isStopped", false);
         _animator.SetBool("isAttack", false);
-        _gameObjectNavMesh.stoppingDistance = 2;
+        _gameObjectNavMesh.stoppingDistance = _stopingDistanse;
         _gameObjectNavMesh.speed = 3;
         StartCoroutine(StartFollowing(_player));
     }
@@ -62,7 +64,14 @@ public class Ninja : BaseAi
         _animator.SetBool("isAttack", false);
         _gameObjectNavMesh.stoppingDistance = 0;
         _gameObjectNavMesh.speed = 3;
-        StartCoroutine(GoingHome(_homePoint));
+        if(_homePoint != null)
+        {
+            StartCoroutine(GoingHome(_homePoint));
+        }
+        else
+        {
+            _animator.SetBool("isStoppedPlayer", true);
+        }
     }
     private void Update()
     {

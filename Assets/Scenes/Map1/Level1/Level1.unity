@@ -669,6 +669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _winMoney: 100
   _endBattleUI: {fileID: 2066363781}
+  _door: {fileID: 0}
   _levels:
   - {fileID: 212223344}
   - {fileID: 1222453141}
@@ -680,6 +681,9 @@ MonoBehaviour:
   - ninjaPrefab: {fileID: 3375876193248671410, guid: b2af26e84ff006f43a436db0a028f7df,
       type: 3}
     ninjaType: DefHero
+  - ninjaPrefab: {fileID: 9040918218658607939, guid: 062cb329244884c44953ccd48978ede7,
+      type: 3}
+    ninjaType: Shuriken
   boxCollider: {fileID: 1418056135}
 --- !u!1 &176639271
 GameObject:

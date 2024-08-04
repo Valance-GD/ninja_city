@@ -11,7 +11,7 @@ public abstract class BaseAi : MonoBehaviour
     [SerializeField] protected float _attackTime;
     [SerializeField] protected int _addResurseAmount;
     [SerializeField] protected string _targetTag;
-    private float defTime;
+    protected float defTime;
     public int AddResourseAmount => _addResurseAmount;
     protected virtual void Start()
     {
@@ -50,7 +50,7 @@ public abstract class BaseAi : MonoBehaviour
         AIMove(closestTarget, attackTime, isNinja);
 
     }
-    private void Attack( Transform target)
+    protected virtual void Attack( Transform target)
     {
         if (target != null)
         {
@@ -70,10 +70,9 @@ public abstract class BaseAi : MonoBehaviour
         {
 
             Ray ray = new Ray(transform.position, transform.forward);
-            Debug.DrawRay(transform.position, transform.forward, Color.red);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 6))
+            if (Physics.Raycast(ray, out hit))
             {
 
                 if (isNinja)

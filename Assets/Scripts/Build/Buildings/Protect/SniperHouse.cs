@@ -6,6 +6,7 @@ public class SniperHouse : MonoBehaviour
     [SerializeField] private float fireRate = 1f;
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform firePoint;
+    [SerializeField] private int projectileDamage = 20;
 
     private float fireCountdown = 0f;
     private Transform target;
@@ -59,6 +60,7 @@ public class SniperHouse : MonoBehaviour
 
         if (projectile != null)
         {
+            projectile.GetDamage(projectileDamage);
             projectile.Seek(target);
         }
     }

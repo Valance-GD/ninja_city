@@ -5,9 +5,13 @@ public class Projectile : MonoBehaviour
 
     [SerializeField] private float speed = 10f;
     // public float explosionRadius = 0f;
-    [SerializeField] private int damage = 20;
+    private int _damage;
     private Transform target;
 
+    public void GetDamage(int damage)
+    {
+        _damage = damage;
+    }
     public void Seek(Transform _target)
     {
         target = _target.GetChild(2);
@@ -16,7 +20,7 @@ public class Projectile : MonoBehaviour
     {
         if (target == null)
         {
-            Destroy(gameObject); // можна замінити щоб не просто щезали 
+            Destroy(gameObject);// можна замінити щоб не просто щезали 
             return;
         }
         Vector3 dir = target.position - transform.position;
@@ -45,7 +49,7 @@ public class Projectile : MonoBehaviour
 
         if (e != null)
         {
-            e.GetComponent<Health>().TakeDamage(damage, e.gameObject);
+            e.GetComponent<Health>().TakeDamage(_damage, e.gameObject);
         }
     }
 
