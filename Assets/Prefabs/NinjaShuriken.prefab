@@ -2741,3 +2741,5 @@ MonoBehaviour:
   _shurikenPrefadb: {fileID: 1709396330638004074, guid: 2fa6001eba1d6cc4d831837f218691c4,
     type: 3}
   _throwPoint: {fileID: 8047792164826114667}
+  _safetyZone: 2
+  _safeCount: 3
